@@ -1,0 +1,7066 @@
+{
+ "now": "2026-10-01T07:00:00Z",
+ "version": 6,
+ "tz_offset_min": 300,
+ "station": {
+  "id": "ALM",
+  "name": "Алматы (демо)",
+  "config": {
+   "plan": {
+    "policy": "soft",
+    "actual_base_wagons": 21000,
+    "month_target_wagons": 26000
+   },
+   "parks": [
+    {
+     "id": "A",
+     "kind": "receiving_departure",
+     "name": "Приёмо-отправочный парк А",
+     "sides": [
+      "west",
+      "east"
+     ],
+     "tracks": [
+      {
+       "kinds": [
+        "freight",
+        "transfer"
+       ],
+       "number": "1",
+       "length_m": 850
+      },
+      {
+       "kinds": [
+        "freight",
+        "transfer"
+       ],
+       "number": "2",
+       "length_m": 850
+      },
+      {
+       "kinds": [
+        "freight",
+        "transfer"
+       ],
+       "number": "3",
+       "length_m": 720
+      },
+      {
+       "kinds": [
+        "freight",
+        "transfer"
+       ],
+       "number": "4",
+       "length_m": 1050
+      },
+      {
+       "kinds": [
+        "freight",
+        "transfer"
+       ],
+       "number": "5",
+       "length_m": 1050
+      },
+      {
+       "kinds": [
+        "freight",
+        "transfer"
+       ],
+       "number": "6",
+       "length_m": 560
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "kind": "sorting",
+     "name": "Сортировочный парк Б",
+     "sides": [
+      "west"
+     ],
+     "tracks": [
+      {
+       "kinds": [
+        "freight",
+        "transfer"
+       ],
+       "number": "7",
+       "length_m": 700
+      },
+      {
+       "kinds": [
+        "freight",
+        "transfer"
+       ],
+       "number": "8",
+       "length_m": 700
+      },
+      {
+       "kinds": [
+        "freight",
+        "transfer"
+       ],
+       "number": "9",
+       "length_m": 650
+      },
+      {
+       "kinds": [
+        "freight",
+        "transfer"
+       ],
+       "number": "10",
+       "length_m": 650
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "kind": "cargo",
+     "name": "Грузовой район",
+     "sides": [
+      "east"
+     ],
+     "tracks": [
+      {
+       "zone": "CF1",
+       "kinds": [
+        "freight"
+       ],
+       "number": "13",
+       "length_m": 420
+      },
+      {
+       "zone": "CF2",
+       "kinds": [
+        "freight"
+       ],
+       "number": "14",
+       "length_m": 380
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "kind": "repair",
+     "name": "Ремонтное депо и ПТО",
+     "sides": [
+      "east"
+     ],
+     "tracks": [
+      {
+       "zone": "DEPOT",
+       "kinds": [
+        "freight"
+       ],
+       "number": "15",
+       "length_m": 300
+      }
+     ]
+    }
+   ],
+   "zones": [
+    {
+     "id": "CF1",
+     "kind": "cargo_front",
+     "name": "Контейнерная площадка (фронт № 1)",
+     "operations": [
+      "loading",
+      "unloading"
+     ]
+    },
+    {
+     "id": "CF2",
+     "kind": "cargo_front",
+     "name": "Крытый склад (фронт № 2)",
+     "operations": [
+      "unloading"
+     ]
+    },
+    {
+     "id": "DEPOT",
+     "kind": "repair",
+     "name": "Вагонное депо",
+     "operations": [
+      "repair"
+     ]
+    },
+    {
+     "id": "PTO",
+     "kind": "inspection",
+     "name": "Пункт технического обслуживания (ПТО)",
+     "operations": [
+      "inspection"
+     ]
+    },
+    {
+     "id": "LOCO",
+     "kind": "loco_depot",
+     "name": "Стоянка маневровых локомотивов",
+     "operations": []
+    }
+   ],
+   "layout": {
+    "dx": 32,
+    "x_east": 1430,
+    "x_west": 170,
+    "lane_gap": 34,
+    "x_west_end": 880,
+    "x_east_start": 960,
+    "x_entry_east": 1580,
+    "x_entry_west": 20
+   },
+   "shifts": {
+    "day": [
+     8,
+     20
+    ],
+    "night": [
+     20,
+     32
+    ],
+    "night_day": [
+     0,
+     24
+    ]
+   },
+   "derived": {
+    "units": "координаты схемы (u); физические длины — в метрах",
+    "turnout_deg": 38.0,
+    "turnout_radius_u": 46,
+    "schema_scale_u_per_m": 0.6817
+   },
+   "station": {
+    "id": "ALM",
+    "geo": {
+     "lat": 43.272,
+     "lon": 76.938,
+     "source": "demo",
+     "axis_deg": 8
+    },
+    "name": "Алматы (демо)",
+    "note": "Схема, ограничения и показатели станции демонстрационные и не соответствуют реальной станции Алматы.",
+    "timezone": "Asia/Almaty"
+   },
+   "config_id": "large",
+   "neighbors": [
+    {
+     "id": "OTR",
+     "name": "Отар (демо)",
+     "side": "west",
+     "accepts": [
+      "freight",
+      "transfer"
+     ],
+     "travel_min": 90,
+     "travel_min_to": {
+      "ZHT": 190
+     },
+     "processing_min": 60,
+     "receiving_tracks": 2,
+     "max_train_length_m": 900,
+     "locomotives_available": 2
+    },
+    {
+     "id": "ZHT",
+     "name": "Жетыген (демо)",
+     "side": "east",
+     "accepts": [
+      "freight",
+      "transfer"
+     ],
+     "travel_min": 75,
+     "travel_min_to": {
+      "OTR": 190
+     },
+     "processing_min": 90,
+     "receiving_tracks": 3,
+     "max_train_length_m": 850,
+     "locomotives_available": 2
+    }
+   ],
+   "resources": [
+    {
+     "id": "ML-1",
+     "kind": "shunting_loco",
+     "name": "Маневровый локомотив ТЭМ2-1047",
+     "zone": "LOCO"
+    },
+    {
+     "id": "ML-2",
+     "kind": "shunting_loco",
+     "name": "Маневровый локомотив ТЭМ2-2210",
+     "zone": "LOCO"
+    },
+    {
+     "id": "LB-1",
+     "kind": "loco_crew",
+     "name": "Локомотивная бригада № 1",
+     "zone": "LOCO",
+     "shift": "day"
+    },
+    {
+     "id": "LB-2",
+     "kind": "loco_crew",
+     "name": "Локомотивная бригада № 2",
+     "zone": "LOCO",
+     "shift": "day"
+    },
+    {
+     "id": "LB-3",
+     "kind": "loco_crew",
+     "name": "Локомотивная бригада № 3",
+     "zone": "LOCO",
+     "shift": "night"
+    },
+    {
+     "id": "SB-1",
+     "kind": "shunting_crew",
+     "name": "Составительская бригада № 1",
+     "zone": "LOCO",
+     "shift": "day"
+    },
+    {
+     "id": "SB-2",
+     "kind": "shunting_crew",
+     "name": "Составительская бригада № 2",
+     "zone": "LOCO",
+     "shift": "night_day"
+    },
+    {
+     "id": "IT-1",
+     "kind": "inspection_team",
+     "name": "Бригада осмотрщиков ПТО № 1",
+     "zone": "PTO",
+     "shift": "day"
+    },
+    {
+     "id": "IT-2",
+     "kind": "inspection_team",
+     "name": "Бригада осмотрщиков ПТО № 2",
+     "zone": "PTO",
+     "shift": "day"
+    },
+    {
+     "id": "IT-3",
+     "kind": "inspection_team",
+     "name": "Бригада осмотрщиков ПТО № 3",
+     "zone": "PTO",
+     "shift": "day"
+    },
+    {
+     "id": "IT-4",
+     "kind": "inspection_team",
+     "name": "Бригада осмотрщиков ПТО № 4",
+     "zone": "PTO",
+     "shift": "night"
+    },
+    {
+     "id": "KK-1",
+     "kind": "cargo_equipment",
+     "name": "Козловой кран КК-1",
+     "zone": "CF1"
+    },
+    {
+     "id": "PG-1",
+     "kind": "cargo_equipment",
+     "name": "Погрузчик ПГ-1",
+     "zone": "CF2"
+    },
+    {
+     "id": "RB-1",
+     "kind": "repair_team",
+     "name": "Ремонтная бригада депо",
+     "zone": "DEPOT",
+     "shift": "day"
+    }
+   ],
+   "timetable": {
+    "cargo": 3,
+    "span_h": 10,
+    "transit": 9,
+    "passenger": 4,
+    "transfer_in": 6
+   },
+   "main_track": {
+    "number": "I",
+    "length_m": 1250,
+    "platforms": [
+     {
+      "id": "P1",
+      "name": "Пассажирская платформа № 1",
+      "length_m": 400
+     }
+    ]
+   },
+   "processing": {
+    "templates": {
+     "cargo": [
+      {
+       "kind": "arrival",
+       "group": "receiving_departure",
+       "duration": 10
+      },
+      {
+       "kind": "inspection",
+       "duration": 30,
+       "requires": [
+        "inspection_team"
+       ]
+      },
+      {
+       "kind": "shunting",
+       "group": "cargo",
+       "duration": 15,
+       "requires": [
+        "shunting_loco",
+        "loco_crew",
+        "shunting_crew"
+       ]
+      },
+      {
+       "kind": "unloading",
+       "duration": 120,
+       "requires": [
+        "cargo_equipment"
+       ]
+      },
+      {
+       "kind": "shunting",
+       "group": "receiving_departure",
+       "duration": 15,
+       "requires": [
+        "shunting_loco",
+        "loco_crew",
+        "shunting_crew"
+       ]
+      },
+      {
+       "kind": "departure",
+       "duration": 8
+      }
+     ],
+     "transit": [
+      {
+       "kind": "arrival",
+       "group": "receiving_departure",
+       "duration": 10
+      },
+      {
+       "kind": "inspection",
+       "duration": 40,
+       "requires": [
+        "inspection_team"
+       ]
+      },
+      {
+       "kind": "departure",
+       "duration": 8
+      }
+     ],
+     "passenger": [
+      {
+       "kind": "arrival",
+       "group": "main",
+       "duration": 4
+      },
+      {
+       "kind": "dwell",
+       "duration": 10
+      },
+      {
+       "kind": "departure",
+       "duration": 4
+      }
+     ],
+     "transfer_in": [
+      {
+       "kind": "arrival",
+       "group": "receiving_departure",
+       "duration": 10
+      },
+      {
+       "kind": "inspection",
+       "duration": 60,
+       "requires": [
+        "inspection_team"
+       ]
+      },
+      {
+       "kind": "shunting",
+       "group": "sorting",
+       "duration": 15,
+       "requires": [
+        "shunting_loco",
+        "loco_crew",
+        "shunting_crew"
+       ]
+      },
+      {
+       "kind": "sorting",
+       "duration": 45,
+       "requires": []
+      }
+     ]
+    },
+    "length_margin_m": 10,
+    "wagon_lengths_m": {
+     "flat": 14.62,
+     "tank": 12.02,
+     "hopper": 14.72,
+     "covered": 17.64,
+     "gondola": 13.92
+    },
+    "track_buffer_min": 5,
+    "transfer_template": "transfer_in",
+    "default_loco_length_m": 34.0
+   },
+   "maintenance": [
+    {
+     "end_h": 15.0,
+     "track": "10",
+     "reason": "Плановая выправка пути (окно обслуживания)",
+     "start_h": 13.0,
+     "object_type": "track"
+    },
+    {
+     "end_h": 19.0,
+     "reason": "ТО-1 маневрового локомотива",
+     "start_h": 18.0,
+     "resource": "ML-2",
+     "object_type": "resource"
+    }
+   ],
+   "capacity_rules": [
+    {
+     "code": "MONTHLY_PLAN",
+     "name": "Месячный план обработки вагонов",
+     "rule": "Факт + согласованные заявки + новая заявка ≤ цель. По умолчанию превышение — предупреждение; в режиме «жёсткая квота» — отказ.",
+     "unit": "вагонов",
+     "period": "календарный месяц",
+     "policy": "soft",
+     "source": "План станции (демо, таблица plans)",
+     "category": "monthly_plan"
+    },
+    {
+     "code": "DAILY_PROCESSING",
+     "name": "Перерабатывающая способность станции",
+     "rule": "Сумма вагонов, прибывающих в переработку за сутки, включая новую заявку, ≤ значения.",
+     "unit": "вагонов в сутки",
+     "value": 1400,
+     "period": "сутки (местное время)",
+     "policy": "hard",
+     "source": "Технико-распорядительный акт (демо)",
+     "category": "processing_capacity"
+    },
+    {
+     "code": "ENTRY_THROUGHPUT_WEST",
+     "name": "Пропускная способность входа со стороны Отар",
+     "rule": "Число прибытий с западной стороны в часовом окне вокруг прибытия ≤ значения.",
+     "unit": "поездов в час",
+     "value": 4,
+     "period": "скользящий час",
+     "policy": "hard",
+     "source": "Расчёт пропускной способности (демо)",
+     "category": "throughput"
+    },
+    {
+     "code": "PARK_A_SIMULTANEOUS",
+     "name": "Одновременная вместимость парка А",
+     "rule": "Нужен хотя бы один путь парка А, свободный на весь интервал приёма и обработки, с полезной длиной не меньше длины состава плюс запас.",
+     "unit": "составов одновременно",
+     "period": "интервал приёма и обработки",
+     "policy": "hard",
+     "source": "Топология станции (пути парка А)",
+     "category": "simultaneous_capacity"
+    },
+    {
+     "code": "RESOURCES",
+     "name": "Доступность бригад и локомотивов",
+     "rule": "Для каждой операции есть ресурс нужного вида в смене, без пересекающихся резервов, с учётом времени перехода между зонами.",
+     "unit": "единиц ресурса",
+     "period": "интервал операции (смена бригады)",
+     "policy": "hard",
+     "source": "Наряд смены (демо)",
+     "category": "resource"
+    },
+    {
+     "code": "TIME_WINDOW",
+     "name": "Возможность приёма в конкретное время",
+     "rule": "Путь, маршрут и ресурсы не заняты, не закрыты и имеют достоверное состояние на весь интервал.",
+     "unit": "интервал времени",
+     "period": "прогнозируемое прибытие и обработка",
+     "policy": "hard",
+     "source": "Резервы, инциденты, окна обслуживания, данные датчиков",
+     "category": "time_window"
+    }
+   ],
+   "zone_travel_min": {
+    "PTO-CF1": 10,
+    "PTO-CF2": 10,
+    "default": 5,
+    "LOCO-CF1": 8,
+    "PTO-DEPOT": 8,
+    "LOCO-DEPOT": 6
+   }
+  }
+ },
+ "neighbors": [
+  {
+   "id": "OTR",
+   "name": "Отар (демо)",
+   "config": {
+    "id": "OTR",
+    "name": "Отар (демо)",
+    "side": "west",
+    "accepts": [
+     "freight",
+     "transfer"
+    ],
+    "occupancy": [
+     [
+      [
+       "2026-10-01T10:16:43.872949+05:00",
+       "2026-10-01T11:18:58.931027+05:00"
+      ],
+      [
+       "2026-10-01T12:30:41.121010+05:00",
+       "2026-10-01T13:50:46.458996+05:00"
+      ],
+      [
+       "2026-10-01T15:52:18.792464+05:00",
+       "2026-10-01T17:53:12.969696+05:00"
+      ],
+      [
+       "2026-10-01T20:11:34.293295+05:00",
+       "2026-10-01T21:19:23.762991+05:00"
+      ]
+     ],
+     [
+      [
+       "2026-10-01T09:03:34.539980+05:00",
+       "2026-10-01T10:23:15.185044+05:00"
+      ],
+      [
+       "2026-10-01T11:59:49.887311+05:00",
+       "2026-10-01T13:02:13.181547+05:00"
+      ],
+      [
+       "2026-10-01T14:05:41.649524+05:00",
+       "2026-10-01T16:04:11.025488+05:00"
+      ],
+      [
+       "2026-10-01T17:45:02.246282+05:00",
+       "2026-10-01T19:04:52.625641+05:00"
+      ],
+      [
+       "2026-10-01T20:50:31.067272+05:00",
+       "2026-10-01T23:03:21.991738+05:00"
+      ]
+     ]
+    ],
+    "travel_min": 90,
+    "travel_min_to": {
+     "ZHT": 190
+    },
+    "processing_min": 60,
+    "receiving_tracks": 2,
+    "max_train_length_m": 900,
+    "locomotives_available": 2
+   }
+  },
+  {
+   "id": "ZHT",
+   "name": "Жетыген (демо)",
+   "config": {
+    "id": "ZHT",
+    "name": "Жетыген (демо)",
+    "side": "east",
+    "accepts": [
+     "freight",
+     "transfer"
+    ],
+    "occupancy": [
+     [
+      [
+       "2026-10-01T10:36:41.898613+05:00",
+       "2026-10-01T12:39:31.851346+05:00"
+      ],
+      [
+       "2026-10-01T13:58:16.674693+05:00",
+       "2026-10-01T15:12:16.263992+05:00"
+      ],
+      [
+       "2026-10-01T17:37:39.004700+05:00",
+       "2026-10-01T19:07:56.615244+05:00"
+      ],
+      [
+       "2026-10-01T19:59:57.608309+05:00",
+       "2026-10-01T21:08:39.876744+05:00"
+      ]
+     ],
+     [
+      [
+       "2026-10-01T10:12:26.827426+05:00",
+       "2026-10-01T12:25:05.320102+05:00"
+      ],
+      [
+       "2026-10-01T14:25:53.982079+05:00",
+       "2026-10-01T16:14:09.613773+05:00"
+      ],
+      [
+       "2026-10-01T18:41:15.403924+05:00",
+       "2026-10-01T20:15:19.489561+05:00"
+      ],
+      [
+       "2026-10-01T21:56:56.712851+05:00",
+       "2026-10-02T00:11:35.498038+05:00"
+      ]
+     ],
+     [
+      [
+       "2026-10-01T10:43:24.289682+05:00",
+       "2026-10-01T12:35:21.991267+05:00"
+      ],
+      [
+       "2026-10-01T14:33:27.616765+05:00",
+       "2026-10-01T15:37:35.068437+05:00"
+      ],
+      [
+       "2026-10-01T16:44:11.849263+05:00",
+       "2026-10-01T18:10:14.544267+05:00"
+      ],
+      [
+       "2026-10-01T19:00:51.596277+05:00",
+       "2026-10-01T20:21:48.667064+05:00"
+      ],
+      [
+       "2026-10-01T21:14:43.156326+05:00",
+       "2026-10-01T22:39:44.213783+05:00"
+      ]
+     ]
+    ],
+    "travel_min": 75,
+    "travel_min_to": {
+     "OTR": 190
+    },
+    "processing_min": 90,
+    "receiving_tracks": 3,
+    "max_train_length_m": 850,
+    "locomotives_available": 2
+   }
+  }
+ ],
+ "nodes": [
+  {
+   "id": "ALM-WENT",
+   "kind": "entry",
+   "name": "Вход/выход (запад)",
+   "x": 20.0,
+   "y": 0.0,
+   "side": "west"
+  },
+  {
+   "id": "ALM-EENT",
+   "kind": "entry",
+   "name": "Вход/выход (восток)",
+   "x": 1580.0,
+   "y": 0.0,
+   "side": "east"
+  },
+  {
+   "id": "ALM-W0",
+   "kind": "switch",
+   "name": "Стр. W0",
+   "x": 170.0,
+   "y": 0.0,
+   "side": "west"
+  },
+  {
+   "id": "ALM-E0",
+   "kind": "switch",
+   "name": "Стр. E0",
+   "x": 1430.0,
+   "y": 0.0,
+   "side": "east"
+  },
+  {
+   "id": "ALM-W1",
+   "kind": "switch",
+   "name": "Стр. W1",
+   "x": 216.876,
+   "y": 24.248,
+   "side": "west"
+  },
+  {
+   "id": "ALM-E1",
+   "kind": "switch",
+   "name": "Стр. E1",
+   "x": 1383.124,
+   "y": 24.248,
+   "side": "east"
+  },
+  {
+   "id": "ALM-W2",
+   "kind": "switch",
+   "name": "Стр. W2",
+   "x": 260.394,
+   "y": 58.248,
+   "side": "west"
+  },
+  {
+   "id": "ALM-E2",
+   "kind": "switch",
+   "name": "Стр. E2",
+   "x": 1339.606,
+   "y": 58.248,
+   "side": "east"
+  },
+  {
+   "id": "ALM-W3",
+   "kind": "switch",
+   "name": "Стр. W3",
+   "x": 303.912,
+   "y": 92.248,
+   "side": "west"
+  },
+  {
+   "id": "ALM-E3",
+   "kind": "switch",
+   "name": "Стр. E3",
+   "x": 1296.088,
+   "y": 92.248,
+   "side": "east"
+  },
+  {
+   "id": "ALM-W4",
+   "kind": "switch",
+   "name": "Стр. W4",
+   "x": 347.43,
+   "y": 126.248,
+   "side": "west"
+  },
+  {
+   "id": "ALM-E4",
+   "kind": "switch",
+   "name": "Стр. E4",
+   "x": 1252.57,
+   "y": 126.248,
+   "side": "east"
+  },
+  {
+   "id": "ALM-W5",
+   "kind": "switch",
+   "name": "Стр. W5",
+   "x": 390.948,
+   "y": 160.248,
+   "side": "west"
+  },
+  {
+   "id": "ALM-E5",
+   "kind": "switch",
+   "name": "Стр. E5",
+   "x": 1209.052,
+   "y": 160.248,
+   "side": "east"
+  },
+  {
+   "id": "ALM-W6",
+   "kind": "switch",
+   "name": "Стр. W6",
+   "x": 434.466,
+   "y": 194.248,
+   "side": "west"
+  },
+  {
+   "id": "ALM-E6",
+   "kind": "switch",
+   "name": "Стр. E6",
+   "x": 1165.534,
+   "y": 194.248,
+   "side": "east"
+  },
+  {
+   "id": "ALM-W7",
+   "kind": "switch",
+   "name": "Стр. W7",
+   "x": 477.984,
+   "y": 228.248,
+   "side": "west"
+  },
+  {
+   "id": "ALM-EEND7",
+   "kind": "end",
+   "name": "Упор 7 (вост.)",
+   "x": 995.494,
+   "y": 238.0,
+   "side": "east"
+  },
+  {
+   "id": "ALM-W8",
+   "kind": "switch",
+   "name": "Стр. W8",
+   "x": 521.502,
+   "y": 262.248,
+   "side": "west"
+  },
+  {
+   "id": "ALM-EEND8",
+   "kind": "end",
+   "name": "Упор 8 (вост.)",
+   "x": 1038.498,
+   "y": 272.0,
+   "side": "east"
+  },
+  {
+   "id": "ALM-W9",
+   "kind": "switch",
+   "name": "Стр. W9",
+   "x": 565.02,
+   "y": 296.248,
+   "side": "west"
+  },
+  {
+   "id": "ALM-EEND9",
+   "kind": "end",
+   "name": "Упор 9 (вост.)",
+   "x": 994.98,
+   "y": 306.0,
+   "side": "east"
+  },
+  {
+   "id": "ALM-W10",
+   "kind": "switch",
+   "name": "Стр. W10",
+   "x": 608.538,
+   "y": 330.248,
+   "side": "west"
+  },
+  {
+   "id": "ALM-EEND10",
+   "kind": "end",
+   "name": "Упор 10 (вост.)",
+   "x": 951.462,
+   "y": 340.0,
+   "side": "east"
+  },
+  {
+   "id": "ALM-E11",
+   "kind": "switch",
+   "name": "Стр. E11",
+   "x": 947.944,
+   "y": 364.248,
+   "side": "east"
+  },
+  {
+   "id": "ALM-WEND11",
+   "kind": "end",
+   "name": "Упор 13 (зап.)",
+   "x": 621.31,
+   "y": 374.0,
+   "side": "west"
+  },
+  {
+   "id": "ALM-E12",
+   "kind": "switch",
+   "name": "Стр. E12",
+   "x": 904.426,
+   "y": 398.248,
+   "side": "east"
+  },
+  {
+   "id": "ALM-WEND12",
+   "kind": "end",
+   "name": "Упор 14 (зап.)",
+   "x": 605.06,
+   "y": 408.0,
+   "side": "west"
+  },
+  {
+   "id": "ALM-E13",
+   "kind": "switch",
+   "name": "Стр. E13",
+   "x": 860.908,
+   "y": 432.248,
+   "side": "east"
+  },
+  {
+   "id": "ALM-WEND13",
+   "kind": "end",
+   "name": "Упор 15 (зап.)",
+   "x": 616.078,
+   "y": 442.0,
+   "side": "west"
+  }
+ ],
+ "tracks": [
+  {
+   "id": "ALM-TI",
+   "number": "I",
+   "kind": "main",
+   "useful_length_m": 1250.0,
+   "allowed_train_kinds": [
+    "passenger",
+    "freight"
+   ],
+   "from_node": "ALM-W0",
+   "to_node": "ALM-E0",
+   "zone_id": null
+  },
+  {
+   "id": "ALM-T1",
+   "number": "1",
+   "kind": "receiving_departure",
+   "useful_length_m": 850.0,
+   "allowed_train_kinds": [
+    "freight",
+    "transfer"
+   ],
+   "from_node": "ALM-W1",
+   "to_node": "ALM-E1",
+   "zone_id": null
+  },
+  {
+   "id": "ALM-T2",
+   "number": "2",
+   "kind": "receiving_departure",
+   "useful_length_m": 850.0,
+   "allowed_train_kinds": [
+    "freight",
+    "transfer"
+   ],
+   "from_node": "ALM-W2",
+   "to_node": "ALM-E2",
+   "zone_id": null
+  },
+  {
+   "id": "ALM-T3",
+   "number": "3",
+   "kind": "receiving_departure",
+   "useful_length_m": 720.0,
+   "allowed_train_kinds": [
+    "freight",
+    "transfer"
+   ],
+   "from_node": "ALM-W3",
+   "to_node": "ALM-E3",
+   "zone_id": null
+  },
+  {
+   "id": "ALM-T4",
+   "number": "4",
+   "kind": "receiving_departure",
+   "useful_length_m": 1050.0,
+   "allowed_train_kinds": [
+    "freight",
+    "transfer"
+   ],
+   "from_node": "ALM-W4",
+   "to_node": "ALM-E4",
+   "zone_id": null
+  },
+  {
+   "id": "ALM-T5",
+   "number": "5",
+   "kind": "receiving_departure",
+   "useful_length_m": 1050.0,
+   "allowed_train_kinds": [
+    "freight",
+    "transfer"
+   ],
+   "from_node": "ALM-W5",
+   "to_node": "ALM-E5",
+   "zone_id": null
+  },
+  {
+   "id": "ALM-T6",
+   "number": "6",
+   "kind": "receiving_departure",
+   "useful_length_m": 560.0,
+   "allowed_train_kinds": [
+    "freight",
+    "transfer"
+   ],
+   "from_node": "ALM-W6",
+   "to_node": "ALM-E6",
+   "zone_id": null
+  },
+  {
+   "id": "ALM-T7",
+   "number": "7",
+   "kind": "sorting",
+   "useful_length_m": 700.0,
+   "allowed_train_kinds": [
+    "freight",
+    "transfer"
+   ],
+   "from_node": "ALM-W7",
+   "to_node": "ALM-EEND7",
+   "zone_id": null
+  },
+  {
+   "id": "ALM-T8",
+   "number": "8",
+   "kind": "sorting",
+   "useful_length_m": 700.0,
+   "allowed_train_kinds": [
+    "freight",
+    "transfer"
+   ],
+   "from_node": "ALM-W8",
+   "to_node": "ALM-EEND8",
+   "zone_id": null
+  },
+  {
+   "id": "ALM-T9",
+   "number": "9",
+   "kind": "sorting",
+   "useful_length_m": 650.0,
+   "allowed_train_kinds": [
+    "freight",
+    "transfer"
+   ],
+   "from_node": "ALM-W9",
+   "to_node": "ALM-EEND9",
+   "zone_id": null
+  },
+  {
+   "id": "ALM-T10",
+   "number": "10",
+   "kind": "sorting",
+   "useful_length_m": 650.0,
+   "allowed_train_kinds": [
+    "freight",
+    "transfer"
+   ],
+   "from_node": "ALM-W10",
+   "to_node": "ALM-EEND10",
+   "zone_id": null
+  },
+  {
+   "id": "ALM-T13",
+   "number": "13",
+   "kind": "cargo",
+   "useful_length_m": 420.0,
+   "allowed_train_kinds": [
+    "freight"
+   ],
+   "from_node": "ALM-WEND11",
+   "to_node": "ALM-E11",
+   "zone_id": "CF1"
+  },
+  {
+   "id": "ALM-T14",
+   "number": "14",
+   "kind": "cargo",
+   "useful_length_m": 380.0,
+   "allowed_train_kinds": [
+    "freight"
+   ],
+   "from_node": "ALM-WEND12",
+   "to_node": "ALM-E12",
+   "zone_id": "CF2"
+  },
+  {
+   "id": "ALM-T15",
+   "number": "15",
+   "kind": "repair",
+   "useful_length_m": 300.0,
+   "allowed_train_kinds": [
+    "freight"
+   ],
+   "from_node": "ALM-WEND13",
+   "to_node": "ALM-E13",
+   "zone_id": "DEPOT"
+  }
+ ],
+ "connections": [
+  {
+   "id": "ALM-AP-W",
+   "from_node": "ALM-WENT",
+   "to_node": "ALM-W0",
+   "kind": "approach",
+   "track_id": null,
+   "length_m": 500.0
+  },
+  {
+   "id": "ALM-AP-E",
+   "from_node": "ALM-E0",
+   "to_node": "ALM-EENT",
+   "kind": "approach",
+   "track_id": null,
+   "length_m": 500.0
+  },
+  {
+   "id": "ALM-C-ALM-TI",
+   "from_node": "ALM-W0",
+   "to_node": "ALM-E0",
+   "kind": "track",
+   "track_id": "ALM-TI",
+   "length_m": 1250.0
+  },
+  {
+   "id": "ALM-L-ALM-W0-ALM-W1",
+   "from_node": "ALM-W0",
+   "to_node": "ALM-W1",
+   "kind": "link",
+   "track_id": null,
+   "length_m": 79.3
+  },
+  {
+   "id": "ALM-L-ALM-E0-ALM-E1",
+   "from_node": "ALM-E0",
+   "to_node": "ALM-E1",
+   "kind": "link",
+   "track_id": null,
+   "length_m": 79.3
+  },
+  {
+   "id": "ALM-C-ALM-T1",
+   "from_node": "ALM-W1",
+   "to_node": "ALM-E1",
+   "kind": "track",
+   "track_id": "ALM-T1",
+   "length_m": 850.0
+  },
+  {
+   "id": "ALM-L-ALM-W1-ALM-W2",
+   "from_node": "ALM-W1",
+   "to_node": "ALM-W2",
+   "kind": "link",
+   "track_id": null,
+   "length_m": 81.0
+  },
+  {
+   "id": "ALM-L-ALM-E1-ALM-E2",
+   "from_node": "ALM-E1",
+   "to_node": "ALM-E2",
+   "kind": "link",
+   "track_id": null,
+   "length_m": 81.0
+  },
+  {
+   "id": "ALM-C-ALM-T2",
+   "from_node": "ALM-W2",
+   "to_node": "ALM-E2",
+   "kind": "track",
+   "track_id": "ALM-T2",
+   "length_m": 850.0
+  },
+  {
+   "id": "ALM-L-ALM-W2-ALM-W3",
+   "from_node": "ALM-W2",
+   "to_node": "ALM-W3",
+   "kind": "link",
+   "track_id": null,
+   "length_m": 81.0
+  },
+  {
+   "id": "ALM-L-ALM-E2-ALM-E3",
+   "from_node": "ALM-E2",
+   "to_node": "ALM-E3",
+   "kind": "link",
+   "track_id": null,
+   "length_m": 81.0
+  },
+  {
+   "id": "ALM-C-ALM-T8",
+   "from_node": "ALM-W8",
+   "to_node": "ALM-EEND8",
+   "kind": "track",
+   "track_id": "ALM-T8",
+   "length_m": 700.0
+  },
+  {
+   "id": "ALM-C-ALM-T3",
+   "from_node": "ALM-W3",
+   "to_node": "ALM-E3",
+   "kind": "track",
+   "track_id": "ALM-T3",
+   "length_m": 720.0
+  },
+  {
+   "id": "ALM-L-ALM-W3-ALM-W4",
+   "from_node": "ALM-W3",
+   "to_node": "ALM-W4",
+   "kind": "link",
+   "track_id": null,
+   "length_m": 81.0
+  },
+  {
+   "id": "ALM-L-ALM-E3-ALM-E4",
+   "from_node": "ALM-E3",
+   "to_node": "ALM-E4",
+   "kind": "link",
+   "track_id": null,
+   "length_m": 81.0
+  },
+  {
+   "id": "ALM-C-ALM-T4",
+   "from_node": "ALM-W4",
+   "to_node": "ALM-E4",
+   "kind": "track",
+   "track_id": "ALM-T4",
+   "length_m": 1050.0
+  },
+  {
+   "id": "ALM-L-ALM-W4-ALM-W5",
+   "from_node": "ALM-W4",
+   "to_node": "ALM-W5",
+   "kind": "link",
+   "track_id": null,
+   "length_m": 81.0
+  },
+  {
+   "id": "ALM-L-ALM-E4-ALM-E5",
+   "from_node": "ALM-E4",
+   "to_node": "ALM-E5",
+   "kind": "link",
+   "track_id": null,
+   "length_m": 81.0
+  },
+  {
+   "id": "ALM-C-ALM-T5",
+   "from_node": "ALM-W5",
+   "to_node": "ALM-E5",
+   "kind": "track",
+   "track_id": "ALM-T5",
+   "length_m": 1050.0
+  },
+  {
+   "id": "ALM-L-ALM-W5-ALM-W6",
+   "from_node": "ALM-W5",
+   "to_node": "ALM-W6",
+   "kind": "link",
+   "track_id": null,
+   "length_m": 81.0
+  },
+  {
+   "id": "ALM-L-ALM-E5-ALM-E6",
+   "from_node": "ALM-E5",
+   "to_node": "ALM-E6",
+   "kind": "link",
+   "track_id": null,
+   "length_m": 81.0
+  },
+  {
+   "id": "ALM-C-ALM-T6",
+   "from_node": "ALM-W6",
+   "to_node": "ALM-E6",
+   "kind": "track",
+   "track_id": "ALM-T6",
+   "length_m": 560.0
+  },
+  {
+   "id": "ALM-L-ALM-W6-ALM-W7",
+   "from_node": "ALM-W6",
+   "to_node": "ALM-W7",
+   "kind": "link",
+   "track_id": null,
+   "length_m": 81.0
+  },
+  {
+   "id": "ALM-C-ALM-T7",
+   "from_node": "ALM-W7",
+   "to_node": "ALM-EEND7",
+   "kind": "track",
+   "track_id": "ALM-T7",
+   "length_m": 700.0
+  },
+  {
+   "id": "ALM-L-ALM-W7-ALM-W8",
+   "from_node": "ALM-W7",
+   "to_node": "ALM-W8",
+   "kind": "link",
+   "track_id": null,
+   "length_m": 81.0
+  },
+  {
+   "id": "ALM-L-ALM-W8-ALM-W9",
+   "from_node": "ALM-W8",
+   "to_node": "ALM-W9",
+   "kind": "link",
+   "track_id": null,
+   "length_m": 81.0
+  },
+  {
+   "id": "ALM-C-ALM-T9",
+   "from_node": "ALM-W9",
+   "to_node": "ALM-EEND9",
+   "kind": "track",
+   "track_id": "ALM-T9",
+   "length_m": 650.0
+  },
+  {
+   "id": "ALM-L-ALM-W9-ALM-W10",
+   "from_node": "ALM-W9",
+   "to_node": "ALM-W10",
+   "kind": "link",
+   "track_id": null,
+   "length_m": 81.0
+  },
+  {
+   "id": "ALM-C-ALM-T10",
+   "from_node": "ALM-W10",
+   "to_node": "ALM-EEND10",
+   "kind": "track",
+   "track_id": "ALM-T10",
+   "length_m": 650.0
+  },
+  {
+   "id": "ALM-L-ALM-E6-ALM-E11",
+   "from_node": "ALM-E6",
+   "to_node": "ALM-E11",
+   "kind": "link",
+   "track_id": null,
+   "length_m": 405.1
+  },
+  {
+   "id": "ALM-C-ALM-T13",
+   "from_node": "ALM-WEND11",
+   "to_node": "ALM-E11",
+   "kind": "track",
+   "track_id": "ALM-T13",
+   "length_m": 420.0
+  },
+  {
+   "id": "ALM-L-ALM-E11-ALM-E12",
+   "from_node": "ALM-E11",
+   "to_node": "ALM-E12",
+   "kind": "link",
+   "track_id": null,
+   "length_m": 81.0
+  },
+  {
+   "id": "ALM-C-ALM-T14",
+   "from_node": "ALM-WEND12",
+   "to_node": "ALM-E12",
+   "kind": "track",
+   "track_id": "ALM-T14",
+   "length_m": 380.0
+  },
+  {
+   "id": "ALM-L-ALM-E12-ALM-E13",
+   "from_node": "ALM-E12",
+   "to_node": "ALM-E13",
+   "kind": "link",
+   "track_id": null,
+   "length_m": 81.0
+  },
+  {
+   "id": "ALM-C-ALM-T15",
+   "from_node": "ALM-WEND13",
+   "to_node": "ALM-E13",
+   "kind": "track",
+   "track_id": "ALM-T15",
+   "length_m": 300.0
+  }
+ ],
+ "resources": [
+  {
+   "id": "ML-1",
+   "kind": "shunting_loco",
+   "name": "Маневровый локомотив ТЭМ2-1047",
+   "home_zone_id": "LOCO",
+   "status": "available"
+  },
+  {
+   "id": "ML-2",
+   "kind": "shunting_loco",
+   "name": "Маневровый локомотив ТЭМ2-2210",
+   "home_zone_id": "LOCO",
+   "status": "available"
+  },
+  {
+   "id": "LB-1",
+   "kind": "loco_crew",
+   "name": "Локомотивная бригада № 1",
+   "home_zone_id": "LOCO",
+   "status": "available"
+  },
+  {
+   "id": "LB-2",
+   "kind": "loco_crew",
+   "name": "Локомотивная бригада № 2",
+   "home_zone_id": "LOCO",
+   "status": "available"
+  },
+  {
+   "id": "LB-3",
+   "kind": "loco_crew",
+   "name": "Локомотивная бригада № 3",
+   "home_zone_id": "LOCO",
+   "status": "available"
+  },
+  {
+   "id": "SB-1",
+   "kind": "shunting_crew",
+   "name": "Составительская бригада № 1",
+   "home_zone_id": "LOCO",
+   "status": "available"
+  },
+  {
+   "id": "SB-2",
+   "kind": "shunting_crew",
+   "name": "Составительская бригада № 2",
+   "home_zone_id": "LOCO",
+   "status": "available"
+  },
+  {
+   "id": "IT-1",
+   "kind": "inspection_team",
+   "name": "Бригада осмотрщиков ПТО № 1",
+   "home_zone_id": "PTO",
+   "status": "available"
+  },
+  {
+   "id": "IT-2",
+   "kind": "inspection_team",
+   "name": "Бригада осмотрщиков ПТО № 2",
+   "home_zone_id": "PTO",
+   "status": "available"
+  },
+  {
+   "id": "IT-3",
+   "kind": "inspection_team",
+   "name": "Бригада осмотрщиков ПТО № 3",
+   "home_zone_id": "PTO",
+   "status": "available"
+  },
+  {
+   "id": "IT-4",
+   "kind": "inspection_team",
+   "name": "Бригада осмотрщиков ПТО № 4",
+   "home_zone_id": "PTO",
+   "status": "available"
+  },
+  {
+   "id": "KK-1",
+   "kind": "cargo_equipment",
+   "name": "Козловой кран КК-1",
+   "home_zone_id": "CF1",
+   "status": "available"
+  },
+  {
+   "id": "PG-1",
+   "kind": "cargo_equipment",
+   "name": "Погрузчик ПГ-1",
+   "home_zone_id": "CF2",
+   "status": "available"
+  },
+  {
+   "id": "RB-1",
+   "kind": "repair_team",
+   "name": "Ремонтная бригада депо",
+   "home_zone_id": "DEPOT",
+   "status": "available"
+  }
+ ],
+ "shifts": {
+  "LB-1": [
+   [
+    "2026-09-30T03:00:00Z",
+    "2026-09-30T15:00:00Z"
+   ],
+   [
+    "2026-10-01T03:00:00Z",
+    "2026-10-01T15:00:00Z"
+   ],
+   [
+    "2026-10-02T03:00:00Z",
+    "2026-10-02T15:00:00Z"
+   ]
+  ],
+  "LB-2": [
+   [
+    "2026-09-30T03:00:00Z",
+    "2026-09-30T15:00:00Z"
+   ],
+   [
+    "2026-10-01T03:00:00Z",
+    "2026-10-01T15:00:00Z"
+   ],
+   [
+    "2026-10-02T03:00:00Z",
+    "2026-10-02T15:00:00Z"
+   ]
+  ],
+  "LB-3": [
+   [
+    "2026-09-30T15:00:00Z",
+    "2026-10-01T03:00:00Z"
+   ],
+   [
+    "2026-10-01T15:00:00Z",
+    "2026-10-02T03:00:00Z"
+   ],
+   [
+    "2026-10-02T15:00:00Z",
+    "2026-10-03T03:00:00Z"
+   ]
+  ],
+  "SB-1": [
+   [
+    "2026-09-30T03:00:00Z",
+    "2026-09-30T15:00:00Z"
+   ],
+   [
+    "2026-10-01T03:00:00Z",
+    "2026-10-01T15:00:00Z"
+   ],
+   [
+    "2026-10-02T03:00:00Z",
+    "2026-10-02T15:00:00Z"
+   ]
+  ],
+  "SB-2": [
+   [
+    "2026-09-29T19:00:00Z",
+    "2026-09-30T19:00:00Z"
+   ],
+   [
+    "2026-09-30T19:00:00Z",
+    "2026-10-01T19:00:00Z"
+   ],
+   [
+    "2026-10-01T19:00:00Z",
+    "2026-10-02T19:00:00Z"
+   ]
+  ],
+  "IT-1": [
+   [
+    "2026-09-30T03:00:00Z",
+    "2026-09-30T15:00:00Z"
+   ],
+   [
+    "2026-10-01T03:00:00Z",
+    "2026-10-01T15:00:00Z"
+   ],
+   [
+    "2026-10-02T03:00:00Z",
+    "2026-10-02T15:00:00Z"
+   ]
+  ],
+  "IT-2": [
+   [
+    "2026-09-30T03:00:00Z",
+    "2026-09-30T15:00:00Z"
+   ],
+   [
+    "2026-10-01T03:00:00Z",
+    "2026-10-01T15:00:00Z"
+   ],
+   [
+    "2026-10-02T03:00:00Z",
+    "2026-10-02T15:00:00Z"
+   ]
+  ],
+  "IT-3": [
+   [
+    "2026-09-30T03:00:00Z",
+    "2026-09-30T15:00:00Z"
+   ],
+   [
+    "2026-10-01T03:00:00Z",
+    "2026-10-01T15:00:00Z"
+   ],
+   [
+    "2026-10-02T03:00:00Z",
+    "2026-10-02T15:00:00Z"
+   ]
+  ],
+  "IT-4": [
+   [
+    "2026-09-30T15:00:00Z",
+    "2026-10-01T03:00:00Z"
+   ],
+   [
+    "2026-10-01T15:00:00Z",
+    "2026-10-02T03:00:00Z"
+   ],
+   [
+    "2026-10-02T15:00:00Z",
+    "2026-10-03T03:00:00Z"
+   ]
+  ],
+  "RB-1": [
+   [
+    "2026-09-30T03:00:00Z",
+    "2026-09-30T15:00:00Z"
+   ],
+   [
+    "2026-10-01T03:00:00Z",
+    "2026-10-01T15:00:00Z"
+   ],
+   [
+    "2026-10-02T03:00:00Z",
+    "2026-10-02T15:00:00Z"
+   ]
+  ]
+ },
+ "maintenance": [
+  {
+   "id": "MW-1",
+   "object_type": "track",
+   "object_id": "ALM-T10",
+   "start_at": "2026-10-01T08:00:00Z",
+   "end_at": "2026-10-01T10:00:00Z",
+   "reason": "Плановая выправка пути (окно обслуживания)"
+  },
+  {
+   "id": "MW-2",
+   "object_type": "resource",
+   "object_id": "ML-2",
+   "start_at": "2026-10-01T13:00:00Z",
+   "end_at": "2026-10-01T14:00:00Z",
+   "reason": "ТО-1 маневрового локомотива"
+  }
+ ],
+ "incidents": [],
+ "trains": [
+  {
+   "id": "TR-102",
+   "number": "102",
+   "kind": "passenger",
+   "priority": 5,
+   "destination_station_id": "ZHT",
+   "arrival_side": "west",
+   "departure_side": "east",
+   "wagons_count": 12,
+   "length_m": null,
+   "loco_length_m": 20.0,
+   "status": "scheduled",
+   "scheduled_arrival": "2026-10-01T11:33:00Z",
+   "expected_arrival": "2026-10-01T11:33:00Z",
+   "scheduled_departure": "2026-10-01T11:47:00Z",
+   "current_track_id": null
+  },
+  {
+   "id": "TR-103",
+   "number": "103",
+   "kind": "passenger",
+   "priority": 5,
+   "destination_station_id": "OTR",
+   "arrival_side": "east",
+   "departure_side": "west",
+   "wagons_count": 12,
+   "length_m": null,
+   "loco_length_m": 20.0,
+   "status": "scheduled",
+   "scheduled_arrival": "2026-10-01T11:56:00Z",
+   "expected_arrival": "2026-10-01T11:56:00Z",
+   "scheduled_departure": "2026-10-01T12:10:00Z",
+   "current_track_id": null
+  },
+  {
+   "id": "TR-104",
+   "number": "104",
+   "kind": "passenger",
+   "priority": 5,
+   "destination_station_id": "OTR",
+   "arrival_side": "east",
+   "departure_side": "west",
+   "wagons_count": 12,
+   "length_m": null,
+   "loco_length_m": 20.0,
+   "status": "scheduled",
+   "scheduled_arrival": "2026-10-01T12:15:00Z",
+   "expected_arrival": "2026-10-01T12:15:00Z",
+   "scheduled_departure": "2026-10-01T12:29:00Z",
+   "current_track_id": null
+  },
+  {
+   "id": "TR-2503",
+   "number": "2503",
+   "kind": "freight",
+   "priority": 2,
+   "destination_station_id": "ZHT",
+   "arrival_side": "west",
+   "departure_side": "east",
+   "wagons_count": 17,
+   "length_m": null,
+   "loco_length_m": 34.0,
+   "status": "scheduled",
+   "scheduled_arrival": "2026-10-01T11:08:00Z",
+   "expected_arrival": "2026-10-01T11:08:00Z",
+   "scheduled_departure": "2026-10-01T14:31:00Z",
+   "current_track_id": null
+  },
+  {
+   "id": "TR-2505",
+   "number": "2505",
+   "kind": "freight",
+   "priority": 2,
+   "destination_station_id": "ZHT",
+   "arrival_side": "west",
+   "departure_side": "east",
+   "wagons_count": 17,
+   "length_m": null,
+   "loco_length_m": 34.0,
+   "status": "scheduled",
+   "scheduled_arrival": "2026-10-01T12:36:00Z",
+   "expected_arrival": "2026-10-01T12:36:00Z",
+   "scheduled_departure": "2026-10-01T16:18:00Z",
+   "current_track_id": null
+  },
+  {
+   "id": "TR-101",
+   "number": "101",
+   "kind": "passenger",
+   "priority": 5,
+   "destination_station_id": "ZHT",
+   "arrival_side": "west",
+   "departure_side": "east",
+   "wagons_count": 12,
+   "length_m": null,
+   "loco_length_m": 20.0,
+   "status": "departed",
+   "scheduled_arrival": "2026-10-01T04:56:00Z",
+   "expected_arrival": "2026-10-01T04:56:00Z",
+   "scheduled_departure": "2026-10-01T05:10:00Z",
+   "current_track_id": null
+  },
+  {
+   "id": "TR-2001",
+   "number": "2001",
+   "kind": "freight",
+   "priority": 3,
+   "destination_station_id": "OTR",
+   "arrival_side": "east",
+   "departure_side": "west",
+   "wagons_count": 48,
+   "length_m": null,
+   "loco_length_m": 34.0,
+   "status": "on_station",
+   "scheduled_arrival": "2026-10-01T05:36:00Z",
+   "expected_arrival": "2026-10-01T05:36:00Z",
+   "scheduled_departure": "2026-10-01T11:56:00Z",
+   "current_track_id": "ALM-T1"
+  },
+  {
+   "id": "TR-2003",
+   "number": "2003",
+   "kind": "freight",
+   "priority": 3,
+   "destination_station_id": "OTR",
+   "arrival_side": "east",
+   "departure_side": "west",
+   "wagons_count": 47,
+   "length_m": null,
+   "loco_length_m": 34.0,
+   "status": "on_station",
+   "scheduled_arrival": "2026-10-01T05:54:00Z",
+   "expected_arrival": "2026-10-01T05:54:00Z",
+   "scheduled_departure": "2026-10-01T08:44:00Z",
+   "current_track_id": "ALM-T2"
+  },
+  {
+   "id": "TR-2005",
+   "number": "2005",
+   "kind": "freight",
+   "priority": 3,
+   "destination_station_id": "OTR",
+   "arrival_side": "east",
+   "departure_side": "west",
+   "wagons_count": 44,
+   "length_m": null,
+   "loco_length_m": 34.0,
+   "status": "on_station",
+   "scheduled_arrival": "2026-10-01T06:00:00Z",
+   "expected_arrival": "2026-10-01T06:00:00Z",
+   "scheduled_departure": "2026-10-01T12:10:00Z",
+   "current_track_id": "ALM-T3"
+  },
+  {
+   "id": "TR-2007",
+   "number": "2007",
+   "kind": "freight",
+   "priority": 3,
+   "destination_station_id": "OTR",
+   "arrival_side": "east",
+   "departure_side": "west",
+   "wagons_count": 52,
+   "length_m": null,
+   "loco_length_m": 34.0,
+   "status": "on_station",
+   "scheduled_arrival": "2026-10-01T06:12:00Z",
+   "expected_arrival": "2026-10-01T06:12:00Z",
+   "scheduled_departure": "2026-10-01T12:02:00Z",
+   "current_track_id": "ALM-T4"
+  },
+  {
+   "id": "TR-2009",
+   "number": "2009",
+   "kind": "freight",
+   "priority": 3,
+   "destination_station_id": "OTR",
+   "arrival_side": "east",
+   "departure_side": "west",
+   "wagons_count": 50,
+   "length_m": null,
+   "loco_length_m": 34.0,
+   "status": "on_station",
+   "scheduled_arrival": "2026-10-01T06:24:00Z",
+   "expected_arrival": "2026-10-01T06:24:00Z",
+   "scheduled_departure": "2026-10-01T12:24:00Z",
+   "current_track_id": "ALM-T5"
+  },
+  {
+   "id": "TR-2011",
+   "number": "2011",
+   "kind": "freight",
+   "priority": 3,
+   "destination_station_id": "OTR",
+   "arrival_side": "east",
+   "departure_side": "west",
+   "wagons_count": 30,
+   "length_m": null,
+   "loco_length_m": 34.0,
+   "status": "on_station",
+   "scheduled_arrival": "2026-10-01T06:30:00Z",
+   "expected_arrival": "2026-10-01T06:30:00Z",
+   "scheduled_departure": "2026-10-01T12:20:00Z",
+   "current_track_id": "ALM-T6"
+  }
+ ],
+ "operations": [
+  {
+   "id": "OP-101-1",
+   "train_id": "TR-101",
+   "kind": "arrival",
+   "seq": 1,
+   "track_id": "ALM-TI",
+   "from_track_id": null,
+   "side": "west",
+   "duration_min": 4,
+   "requirements": [],
+   "resource_ids": [],
+   "route_nodes": [
+    "ALM-W0"
+   ],
+   "planned_start": "2026-10-01T04:56:00Z",
+   "planned_end": "2026-10-01T05:00:00Z",
+   "not_before": "2026-10-01T04:56:00Z",
+   "forecast_start": "2026-10-01T04:56:00Z",
+   "forecast_end": "2026-10-01T05:00:00Z",
+   "actual_start": "2026-10-01T04:56:00Z",
+   "actual_end": "2026-10-01T05:00:00Z",
+   "status": "done",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-101-2",
+   "train_id": "TR-101",
+   "kind": "dwell",
+   "seq": 2,
+   "track_id": "ALM-TI",
+   "from_track_id": null,
+   "side": null,
+   "duration_min": 10,
+   "requirements": [],
+   "resource_ids": [],
+   "route_nodes": [],
+   "planned_start": "2026-10-01T05:00:00Z",
+   "planned_end": "2026-10-01T05:10:00Z",
+   "not_before": null,
+   "forecast_start": "2026-10-01T05:00:00Z",
+   "forecast_end": "2026-10-01T05:10:00Z",
+   "actual_start": "2026-10-01T05:00:00Z",
+   "actual_end": "2026-10-01T05:10:00Z",
+   "status": "done",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-101-3",
+   "train_id": "TR-101",
+   "kind": "departure",
+   "seq": 3,
+   "track_id": "ALM-TI",
+   "from_track_id": "ALM-TI",
+   "side": "east",
+   "duration_min": 4,
+   "requirements": [],
+   "resource_ids": [],
+   "route_nodes": [
+    "ALM-E0"
+   ],
+   "planned_start": "2026-10-01T05:10:00Z",
+   "planned_end": "2026-10-01T05:14:00Z",
+   "not_before": "2026-10-01T05:10:00Z",
+   "forecast_start": "2026-10-01T05:10:00Z",
+   "forecast_end": "2026-10-01T05:14:00Z",
+   "actual_start": "2026-10-01T05:10:00Z",
+   "actual_end": "2026-10-01T05:14:00Z",
+   "status": "done",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-102-1",
+   "train_id": "TR-102",
+   "kind": "arrival",
+   "seq": 1,
+   "track_id": "ALM-TI",
+   "from_track_id": null,
+   "side": "west",
+   "duration_min": 4,
+   "requirements": [],
+   "resource_ids": [],
+   "route_nodes": [
+    "ALM-W0"
+   ],
+   "planned_start": "2026-10-01T11:33:00Z",
+   "planned_end": "2026-10-01T11:37:00Z",
+   "not_before": "2026-10-01T11:33:00Z",
+   "forecast_start": "2026-10-01T11:33:00Z",
+   "forecast_end": "2026-10-01T11:37:00Z",
+   "actual_start": null,
+   "actual_end": null,
+   "status": "planned",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-102-2",
+   "train_id": "TR-102",
+   "kind": "dwell",
+   "seq": 2,
+   "track_id": "ALM-TI",
+   "from_track_id": null,
+   "side": null,
+   "duration_min": 10,
+   "requirements": [],
+   "resource_ids": [],
+   "route_nodes": [],
+   "planned_start": "2026-10-01T11:37:00Z",
+   "planned_end": "2026-10-01T11:47:00Z",
+   "not_before": null,
+   "forecast_start": "2026-10-01T11:37:00Z",
+   "forecast_end": "2026-10-01T11:47:00Z",
+   "actual_start": null,
+   "actual_end": null,
+   "status": "planned",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-102-3",
+   "train_id": "TR-102",
+   "kind": "departure",
+   "seq": 3,
+   "track_id": "ALM-TI",
+   "from_track_id": "ALM-TI",
+   "side": "east",
+   "duration_min": 4,
+   "requirements": [],
+   "resource_ids": [],
+   "route_nodes": [
+    "ALM-E0"
+   ],
+   "planned_start": "2026-10-01T11:47:00Z",
+   "planned_end": "2026-10-01T11:51:00Z",
+   "not_before": "2026-10-01T11:47:00Z",
+   "forecast_start": "2026-10-01T11:47:00Z",
+   "forecast_end": "2026-10-01T11:51:00Z",
+   "actual_start": null,
+   "actual_end": null,
+   "status": "planned",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-103-1",
+   "train_id": "TR-103",
+   "kind": "arrival",
+   "seq": 1,
+   "track_id": "ALM-TI",
+   "from_track_id": null,
+   "side": "east",
+   "duration_min": 4,
+   "requirements": [],
+   "resource_ids": [],
+   "route_nodes": [
+    "ALM-E0"
+   ],
+   "planned_start": "2026-10-01T11:56:00Z",
+   "planned_end": "2026-10-01T12:00:00Z",
+   "not_before": "2026-10-01T11:56:00Z",
+   "forecast_start": "2026-10-01T11:56:00Z",
+   "forecast_end": "2026-10-01T12:00:00Z",
+   "actual_start": null,
+   "actual_end": null,
+   "status": "planned",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-103-2",
+   "train_id": "TR-103",
+   "kind": "dwell",
+   "seq": 2,
+   "track_id": "ALM-TI",
+   "from_track_id": null,
+   "side": null,
+   "duration_min": 10,
+   "requirements": [],
+   "resource_ids": [],
+   "route_nodes": [],
+   "planned_start": "2026-10-01T12:00:00Z",
+   "planned_end": "2026-10-01T12:10:00Z",
+   "not_before": null,
+   "forecast_start": "2026-10-01T12:00:00Z",
+   "forecast_end": "2026-10-01T12:10:00Z",
+   "actual_start": null,
+   "actual_end": null,
+   "status": "planned",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-103-3",
+   "train_id": "TR-103",
+   "kind": "departure",
+   "seq": 3,
+   "track_id": "ALM-TI",
+   "from_track_id": "ALM-TI",
+   "side": "west",
+   "duration_min": 4,
+   "requirements": [],
+   "resource_ids": [],
+   "route_nodes": [
+    "ALM-W0"
+   ],
+   "planned_start": "2026-10-01T12:42:00Z",
+   "planned_end": "2026-10-01T12:46:00Z",
+   "not_before": "2026-10-01T12:10:00Z",
+   "forecast_start": "2026-10-01T12:42:00Z",
+   "forecast_end": "2026-10-01T12:46:00Z",
+   "actual_start": null,
+   "actual_end": null,
+   "status": "planned",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-104-1",
+   "train_id": "TR-104",
+   "kind": "arrival",
+   "seq": 1,
+   "track_id": "ALM-TI",
+   "from_track_id": null,
+   "side": "east",
+   "duration_min": 4,
+   "requirements": [],
+   "resource_ids": [],
+   "route_nodes": [
+    "ALM-E0"
+   ],
+   "planned_start": "2026-10-01T12:51:00Z",
+   "planned_end": "2026-10-01T12:55:00Z",
+   "not_before": "2026-10-01T12:15:00Z",
+   "forecast_start": "2026-10-01T12:51:00Z",
+   "forecast_end": "2026-10-01T12:55:00Z",
+   "actual_start": null,
+   "actual_end": null,
+   "status": "planned",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-104-2",
+   "train_id": "TR-104",
+   "kind": "dwell",
+   "seq": 2,
+   "track_id": "ALM-TI",
+   "from_track_id": null,
+   "side": null,
+   "duration_min": 10,
+   "requirements": [],
+   "resource_ids": [],
+   "route_nodes": [],
+   "planned_start": "2026-10-01T12:55:00Z",
+   "planned_end": "2026-10-01T13:05:00Z",
+   "not_before": null,
+   "forecast_start": "2026-10-01T12:55:00Z",
+   "forecast_end": "2026-10-01T13:05:00Z",
+   "actual_start": null,
+   "actual_end": null,
+   "status": "planned",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-104-3",
+   "train_id": "TR-104",
+   "kind": "departure",
+   "seq": 3,
+   "track_id": "ALM-TI",
+   "from_track_id": "ALM-TI",
+   "side": "west",
+   "duration_min": 4,
+   "requirements": [],
+   "resource_ids": [],
+   "route_nodes": [
+    "ALM-W0"
+   ],
+   "planned_start": "2026-10-01T13:05:00Z",
+   "planned_end": "2026-10-01T13:09:00Z",
+   "not_before": "2026-10-01T12:29:00Z",
+   "forecast_start": "2026-10-01T13:05:00Z",
+   "forecast_end": "2026-10-01T13:09:00Z",
+   "actual_start": null,
+   "actual_end": null,
+   "status": "planned",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-2001-1",
+   "train_id": "TR-2001",
+   "kind": "arrival",
+   "seq": 1,
+   "track_id": "ALM-T1",
+   "from_track_id": null,
+   "side": "east",
+   "duration_min": 10,
+   "requirements": [],
+   "resource_ids": [],
+   "route_nodes": [
+    "ALM-E0",
+    "ALM-E1"
+   ],
+   "planned_start": "2026-10-01T05:36:00Z",
+   "planned_end": "2026-10-01T05:46:00Z",
+   "not_before": "2026-10-01T05:36:00Z",
+   "forecast_start": "2026-10-01T05:36:00Z",
+   "forecast_end": "2026-10-01T05:46:00Z",
+   "actual_start": "2026-10-01T05:36:00Z",
+   "actual_end": "2026-10-01T05:46:00Z",
+   "status": "done",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-2001-2",
+   "train_id": "TR-2001",
+   "kind": "inspection",
+   "seq": 2,
+   "track_id": "ALM-T1",
+   "from_track_id": null,
+   "side": null,
+   "duration_min": 40,
+   "requirements": [
+    "inspection_team"
+   ],
+   "resource_ids": [
+    "IT-1"
+   ],
+   "route_nodes": [],
+   "planned_start": "2026-10-01T05:46:00Z",
+   "planned_end": "2026-10-01T06:26:00Z",
+   "not_before": null,
+   "forecast_start": "2026-10-01T05:46:00Z",
+   "forecast_end": "2026-10-01T06:26:00Z",
+   "actual_start": "2026-10-01T05:46:00Z",
+   "actual_end": "2026-10-01T06:26:00Z",
+   "status": "done",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-2001-3",
+   "train_id": "TR-2001",
+   "kind": "departure",
+   "seq": 3,
+   "track_id": "ALM-T1",
+   "from_track_id": "ALM-T1",
+   "side": "west",
+   "duration_min": 8,
+   "requirements": [],
+   "resource_ids": [],
+   "route_nodes": [
+    "ALM-W1",
+    "ALM-W0"
+   ],
+   "planned_start": "2026-10-01T11:56:00Z",
+   "planned_end": "2026-10-01T12:04:00Z",
+   "not_before": "2026-10-01T11:56:00Z",
+   "forecast_start": "2026-10-01T11:56:00Z",
+   "forecast_end": "2026-10-01T12:04:00Z",
+   "actual_start": null,
+   "actual_end": null,
+   "status": "planned",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-2003-1",
+   "train_id": "TR-2003",
+   "kind": "arrival",
+   "seq": 1,
+   "track_id": "ALM-T2",
+   "from_track_id": null,
+   "side": "east",
+   "duration_min": 10,
+   "requirements": [],
+   "resource_ids": [],
+   "route_nodes": [
+    "ALM-E0",
+    "ALM-E1",
+    "ALM-E2"
+   ],
+   "planned_start": "2026-10-01T05:54:00Z",
+   "planned_end": "2026-10-01T06:04:00Z",
+   "not_before": "2026-10-01T05:54:00Z",
+   "forecast_start": "2026-10-01T05:54:00Z",
+   "forecast_end": "2026-10-01T06:04:00Z",
+   "actual_start": "2026-10-01T05:54:00Z",
+   "actual_end": "2026-10-01T06:04:00Z",
+   "status": "done",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-2003-2",
+   "train_id": "TR-2003",
+   "kind": "inspection",
+   "seq": 2,
+   "track_id": "ALM-T2",
+   "from_track_id": null,
+   "side": null,
+   "duration_min": 40,
+   "requirements": [
+    "inspection_team"
+   ],
+   "resource_ids": [
+    "IT-2"
+   ],
+   "route_nodes": [],
+   "planned_start": "2026-10-01T06:04:00Z",
+   "planned_end": "2026-10-01T06:44:00Z",
+   "not_before": null,
+   "forecast_start": "2026-10-01T06:04:00Z",
+   "forecast_end": "2026-10-01T06:44:00Z",
+   "actual_start": "2026-10-01T06:04:00Z",
+   "actual_end": "2026-10-01T06:44:00Z",
+   "status": "done",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-2003-3",
+   "train_id": "TR-2003",
+   "kind": "departure",
+   "seq": 3,
+   "track_id": "ALM-T2",
+   "from_track_id": "ALM-T2",
+   "side": "west",
+   "duration_min": 8,
+   "requirements": [],
+   "resource_ids": [],
+   "route_nodes": [
+    "ALM-W2",
+    "ALM-W1",
+    "ALM-W0"
+   ],
+   "planned_start": "2026-10-01T08:44:00Z",
+   "planned_end": "2026-10-01T08:52:00Z",
+   "not_before": "2026-10-01T08:44:00Z",
+   "forecast_start": "2026-10-01T08:44:00Z",
+   "forecast_end": "2026-10-01T08:52:00Z",
+   "actual_start": null,
+   "actual_end": null,
+   "status": "planned",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-2005-1",
+   "train_id": "TR-2005",
+   "kind": "arrival",
+   "seq": 1,
+   "track_id": "ALM-T3",
+   "from_track_id": null,
+   "side": "east",
+   "duration_min": 10,
+   "requirements": [],
+   "resource_ids": [],
+   "route_nodes": [
+    "ALM-E0",
+    "ALM-E1",
+    "ALM-E2",
+    "ALM-E3"
+   ],
+   "planned_start": "2026-10-01T06:04:00Z",
+   "planned_end": "2026-10-01T06:14:00Z",
+   "not_before": "2026-10-01T06:00:00Z",
+   "forecast_start": "2026-10-01T06:04:00Z",
+   "forecast_end": "2026-10-01T06:14:00Z",
+   "actual_start": "2026-10-01T06:04:00Z",
+   "actual_end": "2026-10-01T06:14:00Z",
+   "status": "done",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-2005-2",
+   "train_id": "TR-2005",
+   "kind": "inspection",
+   "seq": 2,
+   "track_id": "ALM-T3",
+   "from_track_id": null,
+   "side": null,
+   "duration_min": 40,
+   "requirements": [
+    "inspection_team"
+   ],
+   "resource_ids": [
+    "IT-3"
+   ],
+   "route_nodes": [],
+   "planned_start": "2026-10-01T06:14:00Z",
+   "planned_end": "2026-10-01T06:54:00Z",
+   "not_before": null,
+   "forecast_start": "2026-10-01T06:14:00Z",
+   "forecast_end": "2026-10-01T06:54:00Z",
+   "actual_start": "2026-10-01T06:14:00Z",
+   "actual_end": "2026-10-01T06:54:00Z",
+   "status": "done",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-2005-3",
+   "train_id": "TR-2005",
+   "kind": "departure",
+   "seq": 3,
+   "track_id": "ALM-T3",
+   "from_track_id": "ALM-T3",
+   "side": "west",
+   "duration_min": 8,
+   "requirements": [],
+   "resource_ids": [],
+   "route_nodes": [
+    "ALM-W3",
+    "ALM-W2",
+    "ALM-W1",
+    "ALM-W0"
+   ],
+   "planned_start": "2026-10-01T12:10:00Z",
+   "planned_end": "2026-10-01T12:18:00Z",
+   "not_before": "2026-10-01T12:10:00Z",
+   "forecast_start": "2026-10-01T12:10:00Z",
+   "forecast_end": "2026-10-01T12:18:00Z",
+   "actual_start": null,
+   "actual_end": null,
+   "status": "planned",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-2007-1",
+   "train_id": "TR-2007",
+   "kind": "arrival",
+   "seq": 1,
+   "track_id": "ALM-T4",
+   "from_track_id": null,
+   "side": "east",
+   "duration_min": 10,
+   "requirements": [],
+   "resource_ids": [],
+   "route_nodes": [
+    "ALM-E0",
+    "ALM-E1",
+    "ALM-E2",
+    "ALM-E3",
+    "ALM-E4"
+   ],
+   "planned_start": "2026-10-01T06:14:00Z",
+   "planned_end": "2026-10-01T06:24:00Z",
+   "not_before": "2026-10-01T06:12:00Z",
+   "forecast_start": "2026-10-01T06:14:00Z",
+   "forecast_end": "2026-10-01T06:24:00Z",
+   "actual_start": "2026-10-01T06:14:00Z",
+   "actual_end": "2026-10-01T06:24:00Z",
+   "status": "done",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-2007-2",
+   "train_id": "TR-2007",
+   "kind": "inspection",
+   "seq": 2,
+   "track_id": "ALM-T4",
+   "from_track_id": null,
+   "side": null,
+   "duration_min": 40,
+   "requirements": [
+    "inspection_team"
+   ],
+   "resource_ids": [
+    "IT-1"
+   ],
+   "route_nodes": [],
+   "planned_start": "2026-10-01T06:26:00Z",
+   "planned_end": "2026-10-01T07:06:00Z",
+   "not_before": null,
+   "forecast_start": "2026-10-01T06:26:00Z",
+   "forecast_end": "2026-10-01T07:06:00Z",
+   "actual_start": "2026-10-01T06:26:00Z",
+   "actual_end": null,
+   "status": "in_progress",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-2007-3",
+   "train_id": "TR-2007",
+   "kind": "departure",
+   "seq": 3,
+   "track_id": "ALM-T4",
+   "from_track_id": "ALM-T4",
+   "side": "west",
+   "duration_min": 8,
+   "requirements": [],
+   "resource_ids": [],
+   "route_nodes": [
+    "ALM-W4",
+    "ALM-W3",
+    "ALM-W2",
+    "ALM-W1",
+    "ALM-W0"
+   ],
+   "planned_start": "2026-10-01T12:18:00Z",
+   "planned_end": "2026-10-01T12:26:00Z",
+   "not_before": "2026-10-01T12:02:00Z",
+   "forecast_start": "2026-10-01T12:18:00Z",
+   "forecast_end": "2026-10-01T12:26:00Z",
+   "actual_start": null,
+   "actual_end": null,
+   "status": "planned",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-2009-1",
+   "train_id": "TR-2009",
+   "kind": "arrival",
+   "seq": 1,
+   "track_id": "ALM-T5",
+   "from_track_id": null,
+   "side": "east",
+   "duration_min": 10,
+   "requirements": [],
+   "resource_ids": [],
+   "route_nodes": [
+    "ALM-E0",
+    "ALM-E1",
+    "ALM-E2",
+    "ALM-E3",
+    "ALM-E4",
+    "ALM-E5"
+   ],
+   "planned_start": "2026-10-01T06:24:00Z",
+   "planned_end": "2026-10-01T06:34:00Z",
+   "not_before": "2026-10-01T06:24:00Z",
+   "forecast_start": "2026-10-01T06:24:00Z",
+   "forecast_end": "2026-10-01T06:34:00Z",
+   "actual_start": "2026-10-01T06:24:00Z",
+   "actual_end": "2026-10-01T06:34:00Z",
+   "status": "done",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-2009-2",
+   "train_id": "TR-2009",
+   "kind": "inspection",
+   "seq": 2,
+   "track_id": "ALM-T5",
+   "from_track_id": null,
+   "side": null,
+   "duration_min": 40,
+   "requirements": [
+    "inspection_team"
+   ],
+   "resource_ids": [
+    "IT-2"
+   ],
+   "route_nodes": [],
+   "planned_start": "2026-10-01T06:44:00Z",
+   "planned_end": "2026-10-01T07:24:00Z",
+   "not_before": null,
+   "forecast_start": "2026-10-01T06:44:00Z",
+   "forecast_end": "2026-10-01T07:24:00Z",
+   "actual_start": "2026-10-01T06:44:00Z",
+   "actual_end": null,
+   "status": "in_progress",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-2009-3",
+   "train_id": "TR-2009",
+   "kind": "departure",
+   "seq": 3,
+   "track_id": "ALM-T5",
+   "from_track_id": "ALM-T5",
+   "side": "west",
+   "duration_min": 8,
+   "requirements": [],
+   "resource_ids": [],
+   "route_nodes": [
+    "ALM-W5",
+    "ALM-W4",
+    "ALM-W3",
+    "ALM-W2",
+    "ALM-W1",
+    "ALM-W0"
+   ],
+   "planned_start": "2026-10-01T12:26:00Z",
+   "planned_end": "2026-10-01T12:34:00Z",
+   "not_before": "2026-10-01T12:24:00Z",
+   "forecast_start": "2026-10-01T12:26:00Z",
+   "forecast_end": "2026-10-01T12:34:00Z",
+   "actual_start": null,
+   "actual_end": null,
+   "status": "planned",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-2011-1",
+   "train_id": "TR-2011",
+   "kind": "arrival",
+   "seq": 1,
+   "track_id": "ALM-T6",
+   "from_track_id": null,
+   "side": "east",
+   "duration_min": 10,
+   "requirements": [],
+   "resource_ids": [],
+   "route_nodes": [
+    "ALM-E0",
+    "ALM-E1",
+    "ALM-E2",
+    "ALM-E3",
+    "ALM-E4",
+    "ALM-E5",
+    "ALM-E6"
+   ],
+   "planned_start": "2026-10-01T06:34:00Z",
+   "planned_end": "2026-10-01T06:44:00Z",
+   "not_before": "2026-10-01T06:30:00Z",
+   "forecast_start": "2026-10-01T06:34:00Z",
+   "forecast_end": "2026-10-01T06:44:00Z",
+   "actual_start": "2026-10-01T06:34:00Z",
+   "actual_end": "2026-10-01T06:44:00Z",
+   "status": "done",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-2011-2",
+   "train_id": "TR-2011",
+   "kind": "inspection",
+   "seq": 2,
+   "track_id": "ALM-T6",
+   "from_track_id": null,
+   "side": null,
+   "duration_min": 40,
+   "requirements": [
+    "inspection_team"
+   ],
+   "resource_ids": [
+    "IT-3"
+   ],
+   "route_nodes": [],
+   "planned_start": "2026-10-01T06:54:00Z",
+   "planned_end": "2026-10-01T07:34:00Z",
+   "not_before": null,
+   "forecast_start": "2026-10-01T06:54:00Z",
+   "forecast_end": "2026-10-01T07:34:00Z",
+   "actual_start": "2026-10-01T06:54:00Z",
+   "actual_end": null,
+   "status": "in_progress",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-2011-3",
+   "train_id": "TR-2011",
+   "kind": "departure",
+   "seq": 3,
+   "track_id": "ALM-T6",
+   "from_track_id": "ALM-T6",
+   "side": "west",
+   "duration_min": 8,
+   "requirements": [],
+   "resource_ids": [],
+   "route_nodes": [
+    "ALM-W6",
+    "ALM-W5",
+    "ALM-W4",
+    "ALM-W3",
+    "ALM-W2",
+    "ALM-W1",
+    "ALM-W0"
+   ],
+   "planned_start": "2026-10-01T12:34:00Z",
+   "planned_end": "2026-10-01T12:42:00Z",
+   "not_before": "2026-10-01T12:20:00Z",
+   "forecast_start": "2026-10-01T12:34:00Z",
+   "forecast_end": "2026-10-01T12:42:00Z",
+   "actual_start": null,
+   "actual_end": null,
+   "status": "planned",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-2503-1",
+   "train_id": "TR-2503",
+   "kind": "arrival",
+   "seq": 1,
+   "track_id": "ALM-T6",
+   "from_track_id": null,
+   "side": "west",
+   "duration_min": 10,
+   "requirements": [],
+   "resource_ids": [],
+   "route_nodes": [
+    "ALM-W0",
+    "ALM-W1",
+    "ALM-W2",
+    "ALM-W3",
+    "ALM-W4",
+    "ALM-W5",
+    "ALM-W6"
+   ],
+   "planned_start": "2026-10-01T12:47:00Z",
+   "planned_end": "2026-10-01T12:57:00Z",
+   "not_before": "2026-10-01T11:08:00Z",
+   "forecast_start": "2026-10-01T12:47:00Z",
+   "forecast_end": "2026-10-01T12:57:00Z",
+   "actual_start": null,
+   "actual_end": null,
+   "status": "planned",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-2503-2",
+   "train_id": "TR-2503",
+   "kind": "inspection",
+   "seq": 2,
+   "track_id": "ALM-T6",
+   "from_track_id": null,
+   "side": null,
+   "duration_min": 30,
+   "requirements": [
+    "inspection_team"
+   ],
+   "resource_ids": [
+    "IT-1"
+   ],
+   "route_nodes": [],
+   "planned_start": "2026-10-01T12:57:00Z",
+   "planned_end": "2026-10-01T13:27:00Z",
+   "not_before": null,
+   "forecast_start": "2026-10-01T12:57:00Z",
+   "forecast_end": "2026-10-01T13:27:00Z",
+   "actual_start": null,
+   "actual_end": null,
+   "status": "planned",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-2503-3",
+   "train_id": "TR-2503",
+   "kind": "shunting",
+   "seq": 3,
+   "track_id": "ALM-T14",
+   "from_track_id": "ALM-T6",
+   "side": null,
+   "duration_min": 15,
+   "requirements": [
+    "shunting_loco",
+    "loco_crew",
+    "shunting_crew"
+   ],
+   "resource_ids": [
+    "ML-1",
+    "LB-1",
+    "SB-1"
+   ],
+   "route_nodes": [
+    "ALM-E6",
+    "ALM-E11",
+    "ALM-E12"
+   ],
+   "planned_start": "2026-10-01T13:27:00Z",
+   "planned_end": "2026-10-01T13:42:00Z",
+   "not_before": null,
+   "forecast_start": "2026-10-01T13:27:00Z",
+   "forecast_end": "2026-10-01T13:42:00Z",
+   "actual_start": null,
+   "actual_end": null,
+   "status": "planned",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-2503-4",
+   "train_id": "TR-2503",
+   "kind": "unloading",
+   "seq": 4,
+   "track_id": "ALM-T14",
+   "from_track_id": null,
+   "side": null,
+   "duration_min": 120,
+   "requirements": [
+    "cargo_equipment"
+   ],
+   "resource_ids": [
+    "KK-1"
+   ],
+   "route_nodes": [],
+   "planned_start": "2026-10-01T13:42:00Z",
+   "planned_end": "2026-10-01T15:42:00Z",
+   "not_before": null,
+   "forecast_start": "2026-10-01T13:42:00Z",
+   "forecast_end": "2026-10-01T15:42:00Z",
+   "actual_start": null,
+   "actual_end": null,
+   "status": "planned",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-2503-5",
+   "train_id": "TR-2503",
+   "kind": "shunting",
+   "seq": 5,
+   "track_id": "ALM-T6",
+   "from_track_id": "ALM-T14",
+   "side": null,
+   "duration_min": 15,
+   "requirements": [
+    "shunting_loco",
+    "loco_crew",
+    "shunting_crew"
+   ],
+   "resource_ids": [
+    "ML-1",
+    "LB-3",
+    "SB-2"
+   ],
+   "route_nodes": [
+    "ALM-E12",
+    "ALM-E11",
+    "ALM-E6"
+   ],
+   "planned_start": "2026-10-01T15:42:00Z",
+   "planned_end": "2026-10-01T15:57:00Z",
+   "not_before": null,
+   "forecast_start": "2026-10-01T15:42:00Z",
+   "forecast_end": "2026-10-01T15:57:00Z",
+   "actual_start": null,
+   "actual_end": null,
+   "status": "planned",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-2503-6",
+   "train_id": "TR-2503",
+   "kind": "departure",
+   "seq": 6,
+   "track_id": "ALM-T6",
+   "from_track_id": "ALM-T6",
+   "side": "east",
+   "duration_min": 8,
+   "requirements": [],
+   "resource_ids": [],
+   "route_nodes": [
+    "ALM-E6",
+    "ALM-E5",
+    "ALM-E4",
+    "ALM-E3",
+    "ALM-E2",
+    "ALM-E1",
+    "ALM-E0"
+   ],
+   "planned_start": "2026-10-01T15:57:00Z",
+   "planned_end": "2026-10-01T16:05:00Z",
+   "not_before": "2026-10-01T14:31:00Z",
+   "forecast_start": "2026-10-01T15:57:00Z",
+   "forecast_end": "2026-10-01T16:05:00Z",
+   "actual_start": null,
+   "actual_end": null,
+   "status": "planned",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-2505-1",
+   "train_id": "TR-2505",
+   "kind": "arrival",
+   "seq": 1,
+   "track_id": "ALM-T6",
+   "from_track_id": null,
+   "side": "west",
+   "duration_min": 10,
+   "requirements": [],
+   "resource_ids": [],
+   "route_nodes": [
+    "ALM-W0",
+    "ALM-W1",
+    "ALM-W2",
+    "ALM-W3",
+    "ALM-W4",
+    "ALM-W5",
+    "ALM-W6"
+   ],
+   "planned_start": "2026-10-01T13:47:00Z",
+   "planned_end": "2026-10-01T13:57:00Z",
+   "not_before": "2026-10-01T12:36:00Z",
+   "forecast_start": "2026-10-01T13:47:00Z",
+   "forecast_end": "2026-10-01T13:57:00Z",
+   "actual_start": null,
+   "actual_end": null,
+   "status": "planned",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-2505-2",
+   "train_id": "TR-2505",
+   "kind": "inspection",
+   "seq": 2,
+   "track_id": "ALM-T6",
+   "from_track_id": null,
+   "side": null,
+   "duration_min": 30,
+   "requirements": [
+    "inspection_team"
+   ],
+   "resource_ids": [
+    "IT-1"
+   ],
+   "route_nodes": [],
+   "planned_start": "2026-10-01T13:57:00Z",
+   "planned_end": "2026-10-01T14:27:00Z",
+   "not_before": null,
+   "forecast_start": "2026-10-01T13:57:00Z",
+   "forecast_end": "2026-10-01T14:27:00Z",
+   "actual_start": null,
+   "actual_end": null,
+   "status": "planned",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-2505-3",
+   "train_id": "TR-2505",
+   "kind": "shunting",
+   "seq": 3,
+   "track_id": "ALM-T13",
+   "from_track_id": "ALM-T6",
+   "side": null,
+   "duration_min": 15,
+   "requirements": [
+    "shunting_loco",
+    "loco_crew",
+    "shunting_crew"
+   ],
+   "resource_ids": [
+    "ML-1",
+    "LB-1",
+    "SB-1"
+   ],
+   "route_nodes": [
+    "ALM-E6",
+    "ALM-E11"
+   ],
+   "planned_start": "2026-10-01T14:27:00Z",
+   "planned_end": "2026-10-01T14:42:00Z",
+   "not_before": null,
+   "forecast_start": "2026-10-01T14:27:00Z",
+   "forecast_end": "2026-10-01T14:42:00Z",
+   "actual_start": null,
+   "actual_end": null,
+   "status": "planned",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-2505-4",
+   "train_id": "TR-2505",
+   "kind": "unloading",
+   "seq": 4,
+   "track_id": "ALM-T13",
+   "from_track_id": null,
+   "side": null,
+   "duration_min": 120,
+   "requirements": [
+    "cargo_equipment"
+   ],
+   "resource_ids": [
+    "PG-1"
+   ],
+   "route_nodes": [],
+   "planned_start": "2026-10-01T14:42:00Z",
+   "planned_end": "2026-10-01T16:42:00Z",
+   "not_before": null,
+   "forecast_start": "2026-10-01T14:42:00Z",
+   "forecast_end": "2026-10-01T16:42:00Z",
+   "actual_start": null,
+   "actual_end": null,
+   "status": "planned",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-2505-5",
+   "train_id": "TR-2505",
+   "kind": "shunting",
+   "seq": 5,
+   "track_id": "ALM-T6",
+   "from_track_id": "ALM-T13",
+   "side": null,
+   "duration_min": 15,
+   "requirements": [
+    "shunting_loco",
+    "loco_crew",
+    "shunting_crew"
+   ],
+   "resource_ids": [
+    "ML-1",
+    "LB-3",
+    "SB-2"
+   ],
+   "route_nodes": [
+    "ALM-E11",
+    "ALM-E6"
+   ],
+   "planned_start": "2026-10-01T16:42:00Z",
+   "planned_end": "2026-10-01T16:57:00Z",
+   "not_before": null,
+   "forecast_start": "2026-10-01T16:42:00Z",
+   "forecast_end": "2026-10-01T16:57:00Z",
+   "actual_start": null,
+   "actual_end": null,
+   "status": "planned",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  },
+  {
+   "id": "OP-2505-6",
+   "train_id": "TR-2505",
+   "kind": "departure",
+   "seq": 6,
+   "track_id": "ALM-T6",
+   "from_track_id": "ALM-T6",
+   "side": "east",
+   "duration_min": 8,
+   "requirements": [],
+   "resource_ids": [],
+   "route_nodes": [
+    "ALM-E6",
+    "ALM-E5",
+    "ALM-E4",
+    "ALM-E3",
+    "ALM-E2",
+    "ALM-E1",
+    "ALM-E0"
+   ],
+   "planned_start": "2026-10-01T16:57:00Z",
+   "planned_end": "2026-10-01T17:05:00Z",
+   "not_before": "2026-10-01T16:18:00Z",
+   "forecast_start": "2026-10-01T16:57:00Z",
+   "forecast_end": "2026-10-01T17:05:00Z",
+   "actual_start": null,
+   "actual_end": null,
+   "status": "planned",
+   "extra_delay_min": 0,
+   "reserved": true,
+   "note": null
+  }
+ ],
+ "wagons": [
+  {
+   "id": "W50373011",
+   "train_id": "TR-2001",
+   "number": "50373011",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373029",
+   "train_id": "TR-2001",
+   "number": "50373029",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373040",
+   "train_id": "TR-2001",
+   "number": "50373040",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373065",
+   "train_id": "TR-2001",
+   "number": "50373065",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373101",
+   "train_id": "TR-2001",
+   "number": "50373101",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373105",
+   "train_id": "TR-2001",
+   "number": "50373105",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373126",
+   "train_id": "TR-2001",
+   "number": "50373126",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373140",
+   "train_id": "TR-2001",
+   "number": "50373140",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373172",
+   "train_id": "TR-2001",
+   "number": "50373172",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373202",
+   "train_id": "TR-2001",
+   "number": "50373202",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373218",
+   "train_id": "TR-2001",
+   "number": "50373218",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373246",
+   "train_id": "TR-2001",
+   "number": "50373246",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373255",
+   "train_id": "TR-2001",
+   "number": "50373255",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373259",
+   "train_id": "TR-2001",
+   "number": "50373259",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373270",
+   "train_id": "TR-2001",
+   "number": "50373270",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373295",
+   "train_id": "TR-2001",
+   "number": "50373295",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373325",
+   "train_id": "TR-2001",
+   "number": "50373325",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373326",
+   "train_id": "TR-2001",
+   "number": "50373326",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373361",
+   "train_id": "TR-2001",
+   "number": "50373361",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373383",
+   "train_id": "TR-2001",
+   "number": "50373383",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373394",
+   "train_id": "TR-2001",
+   "number": "50373394",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373411",
+   "train_id": "TR-2001",
+   "number": "50373411",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373418",
+   "train_id": "TR-2001",
+   "number": "50373418",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373451",
+   "train_id": "TR-2001",
+   "number": "50373451",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373462",
+   "train_id": "TR-2001",
+   "number": "50373462",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373494",
+   "train_id": "TR-2001",
+   "number": "50373494",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373518",
+   "train_id": "TR-2001",
+   "number": "50373518",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373534",
+   "train_id": "TR-2001",
+   "number": "50373534",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373566",
+   "train_id": "TR-2001",
+   "number": "50373566",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373601",
+   "train_id": "TR-2001",
+   "number": "50373601",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373632",
+   "train_id": "TR-2001",
+   "number": "50373632",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373660",
+   "train_id": "TR-2001",
+   "number": "50373660",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373673",
+   "train_id": "TR-2001",
+   "number": "50373673",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373697",
+   "train_id": "TR-2001",
+   "number": "50373697",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373726",
+   "train_id": "TR-2001",
+   "number": "50373726",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373731",
+   "train_id": "TR-2001",
+   "number": "50373731",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373767",
+   "train_id": "TR-2001",
+   "number": "50373767",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373768",
+   "train_id": "TR-2001",
+   "number": "50373768",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373772",
+   "train_id": "TR-2001",
+   "number": "50373772",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373775",
+   "train_id": "TR-2001",
+   "number": "50373775",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373791",
+   "train_id": "TR-2001",
+   "number": "50373791",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373805",
+   "train_id": "TR-2001",
+   "number": "50373805",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373842",
+   "train_id": "TR-2001",
+   "number": "50373842",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373873",
+   "train_id": "TR-2001",
+   "number": "50373873",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373880",
+   "train_id": "TR-2001",
+   "number": "50373880",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373907",
+   "train_id": "TR-2001",
+   "number": "50373907",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373911",
+   "train_id": "TR-2001",
+   "number": "50373911",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373933",
+   "train_id": "TR-2001",
+   "number": "50373933",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373946",
+   "train_id": "TR-2003",
+   "number": "50373946",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373958",
+   "train_id": "TR-2003",
+   "number": "50373958",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373963",
+   "train_id": "TR-2003",
+   "number": "50373963",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50373999",
+   "train_id": "TR-2003",
+   "number": "50373999",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374034",
+   "train_id": "TR-2003",
+   "number": "50374034",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374050",
+   "train_id": "TR-2003",
+   "number": "50374050",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374081",
+   "train_id": "TR-2003",
+   "number": "50374081",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374085",
+   "train_id": "TR-2003",
+   "number": "50374085",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374110",
+   "train_id": "TR-2003",
+   "number": "50374110",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374140",
+   "train_id": "TR-2003",
+   "number": "50374140",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374176",
+   "train_id": "TR-2003",
+   "number": "50374176",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374195",
+   "train_id": "TR-2003",
+   "number": "50374195",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374230",
+   "train_id": "TR-2003",
+   "number": "50374230",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374234",
+   "train_id": "TR-2003",
+   "number": "50374234",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374267",
+   "train_id": "TR-2003",
+   "number": "50374267",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374300",
+   "train_id": "TR-2003",
+   "number": "50374300",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374305",
+   "train_id": "TR-2003",
+   "number": "50374305",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374321",
+   "train_id": "TR-2003",
+   "number": "50374321",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374358",
+   "train_id": "TR-2003",
+   "number": "50374358",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374361",
+   "train_id": "TR-2003",
+   "number": "50374361",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374398",
+   "train_id": "TR-2003",
+   "number": "50374398",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374412",
+   "train_id": "TR-2003",
+   "number": "50374412",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374438",
+   "train_id": "TR-2003",
+   "number": "50374438",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374458",
+   "train_id": "TR-2003",
+   "number": "50374458",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374463",
+   "train_id": "TR-2003",
+   "number": "50374463",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374500",
+   "train_id": "TR-2003",
+   "number": "50374500",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374514",
+   "train_id": "TR-2003",
+   "number": "50374514",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374537",
+   "train_id": "TR-2003",
+   "number": "50374537",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374561",
+   "train_id": "TR-2003",
+   "number": "50374561",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374596",
+   "train_id": "TR-2003",
+   "number": "50374596",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374630",
+   "train_id": "TR-2003",
+   "number": "50374630",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374666",
+   "train_id": "TR-2003",
+   "number": "50374666",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374673",
+   "train_id": "TR-2003",
+   "number": "50374673",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374680",
+   "train_id": "TR-2003",
+   "number": "50374680",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374694",
+   "train_id": "TR-2003",
+   "number": "50374694",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374711",
+   "train_id": "TR-2003",
+   "number": "50374711",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374715",
+   "train_id": "TR-2003",
+   "number": "50374715",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374733",
+   "train_id": "TR-2003",
+   "number": "50374733",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374742",
+   "train_id": "TR-2003",
+   "number": "50374742",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374771",
+   "train_id": "TR-2003",
+   "number": "50374771",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374779",
+   "train_id": "TR-2003",
+   "number": "50374779",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374789",
+   "train_id": "TR-2003",
+   "number": "50374789",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374825",
+   "train_id": "TR-2003",
+   "number": "50374825",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374828",
+   "train_id": "TR-2003",
+   "number": "50374828",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374831",
+   "train_id": "TR-2003",
+   "number": "50374831",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374847",
+   "train_id": "TR-2003",
+   "number": "50374847",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374883",
+   "train_id": "TR-2003",
+   "number": "50374883",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374893",
+   "train_id": "TR-2005",
+   "number": "50374893",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374905",
+   "train_id": "TR-2005",
+   "number": "50374905",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374927",
+   "train_id": "TR-2005",
+   "number": "50374927",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374943",
+   "train_id": "TR-2005",
+   "number": "50374943",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374950",
+   "train_id": "TR-2005",
+   "number": "50374950",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50374981",
+   "train_id": "TR-2005",
+   "number": "50374981",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375011",
+   "train_id": "TR-2005",
+   "number": "50375011",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375026",
+   "train_id": "TR-2005",
+   "number": "50375026",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375039",
+   "train_id": "TR-2005",
+   "number": "50375039",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375044",
+   "train_id": "TR-2005",
+   "number": "50375044",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375077",
+   "train_id": "TR-2005",
+   "number": "50375077",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375112",
+   "train_id": "TR-2005",
+   "number": "50375112",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375120",
+   "train_id": "TR-2005",
+   "number": "50375120",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375137",
+   "train_id": "TR-2005",
+   "number": "50375137",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375165",
+   "train_id": "TR-2005",
+   "number": "50375165",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375186",
+   "train_id": "TR-2005",
+   "number": "50375186",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375219",
+   "train_id": "TR-2005",
+   "number": "50375219",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375256",
+   "train_id": "TR-2005",
+   "number": "50375256",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375284",
+   "train_id": "TR-2005",
+   "number": "50375284",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375319",
+   "train_id": "TR-2005",
+   "number": "50375319",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375324",
+   "train_id": "TR-2005",
+   "number": "50375324",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375332",
+   "train_id": "TR-2005",
+   "number": "50375332",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375359",
+   "train_id": "TR-2005",
+   "number": "50375359",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375378",
+   "train_id": "TR-2005",
+   "number": "50375378",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375403",
+   "train_id": "TR-2005",
+   "number": "50375403",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375423",
+   "train_id": "TR-2005",
+   "number": "50375423",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375424",
+   "train_id": "TR-2005",
+   "number": "50375424",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375452",
+   "train_id": "TR-2005",
+   "number": "50375452",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375481",
+   "train_id": "TR-2005",
+   "number": "50375481",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375492",
+   "train_id": "TR-2005",
+   "number": "50375492",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375514",
+   "train_id": "TR-2005",
+   "number": "50375514",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375530",
+   "train_id": "TR-2005",
+   "number": "50375530",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375543",
+   "train_id": "TR-2005",
+   "number": "50375543",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375559",
+   "train_id": "TR-2005",
+   "number": "50375559",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375564",
+   "train_id": "TR-2005",
+   "number": "50375564",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375601",
+   "train_id": "TR-2005",
+   "number": "50375601",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375626",
+   "train_id": "TR-2005",
+   "number": "50375626",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375636",
+   "train_id": "TR-2005",
+   "number": "50375636",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375643",
+   "train_id": "TR-2005",
+   "number": "50375643",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375677",
+   "train_id": "TR-2005",
+   "number": "50375677",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375693",
+   "train_id": "TR-2005",
+   "number": "50375693",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375723",
+   "train_id": "TR-2005",
+   "number": "50375723",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375752",
+   "train_id": "TR-2005",
+   "number": "50375752",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375788",
+   "train_id": "TR-2005",
+   "number": "50375788",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375819",
+   "train_id": "TR-2007",
+   "number": "50375819",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375835",
+   "train_id": "TR-2007",
+   "number": "50375835",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375869",
+   "train_id": "TR-2007",
+   "number": "50375869",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375887",
+   "train_id": "TR-2007",
+   "number": "50375887",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375906",
+   "train_id": "TR-2007",
+   "number": "50375906",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375927",
+   "train_id": "TR-2007",
+   "number": "50375927",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375942",
+   "train_id": "TR-2007",
+   "number": "50375942",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375956",
+   "train_id": "TR-2007",
+   "number": "50375956",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375978",
+   "train_id": "TR-2007",
+   "number": "50375978",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375992",
+   "train_id": "TR-2007",
+   "number": "50375992",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50375994",
+   "train_id": "TR-2007",
+   "number": "50375994",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376017",
+   "train_id": "TR-2007",
+   "number": "50376017",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376044",
+   "train_id": "TR-2007",
+   "number": "50376044",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376062",
+   "train_id": "TR-2007",
+   "number": "50376062",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376087",
+   "train_id": "TR-2007",
+   "number": "50376087",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376113",
+   "train_id": "TR-2007",
+   "number": "50376113",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376122",
+   "train_id": "TR-2007",
+   "number": "50376122",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376159",
+   "train_id": "TR-2007",
+   "number": "50376159",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376187",
+   "train_id": "TR-2007",
+   "number": "50376187",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376199",
+   "train_id": "TR-2007",
+   "number": "50376199",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376220",
+   "train_id": "TR-2007",
+   "number": "50376220",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376242",
+   "train_id": "TR-2007",
+   "number": "50376242",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376269",
+   "train_id": "TR-2007",
+   "number": "50376269",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376300",
+   "train_id": "TR-2007",
+   "number": "50376300",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376304",
+   "train_id": "TR-2007",
+   "number": "50376304",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376309",
+   "train_id": "TR-2007",
+   "number": "50376309",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376325",
+   "train_id": "TR-2007",
+   "number": "50376325",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376335",
+   "train_id": "TR-2007",
+   "number": "50376335",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376343",
+   "train_id": "TR-2007",
+   "number": "50376343",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376360",
+   "train_id": "TR-2007",
+   "number": "50376360",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376368",
+   "train_id": "TR-2007",
+   "number": "50376368",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376375",
+   "train_id": "TR-2007",
+   "number": "50376375",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376412",
+   "train_id": "TR-2007",
+   "number": "50376412",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376425",
+   "train_id": "TR-2007",
+   "number": "50376425",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376441",
+   "train_id": "TR-2007",
+   "number": "50376441",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376461",
+   "train_id": "TR-2007",
+   "number": "50376461",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376498",
+   "train_id": "TR-2007",
+   "number": "50376498",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376526",
+   "train_id": "TR-2007",
+   "number": "50376526",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376548",
+   "train_id": "TR-2007",
+   "number": "50376548",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376580",
+   "train_id": "TR-2007",
+   "number": "50376580",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376604",
+   "train_id": "TR-2007",
+   "number": "50376604",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376632",
+   "train_id": "TR-2007",
+   "number": "50376632",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376650",
+   "train_id": "TR-2007",
+   "number": "50376650",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376668",
+   "train_id": "TR-2007",
+   "number": "50376668",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376674",
+   "train_id": "TR-2007",
+   "number": "50376674",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376690",
+   "train_id": "TR-2007",
+   "number": "50376690",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376715",
+   "train_id": "TR-2007",
+   "number": "50376715",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376736",
+   "train_id": "TR-2007",
+   "number": "50376736",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376759",
+   "train_id": "TR-2007",
+   "number": "50376759",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376777",
+   "train_id": "TR-2007",
+   "number": "50376777",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376790",
+   "train_id": "TR-2007",
+   "number": "50376790",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376817",
+   "train_id": "TR-2007",
+   "number": "50376817",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376833",
+   "train_id": "TR-2009",
+   "number": "50376833",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376865",
+   "train_id": "TR-2009",
+   "number": "50376865",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376871",
+   "train_id": "TR-2009",
+   "number": "50376871",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376887",
+   "train_id": "TR-2009",
+   "number": "50376887",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376911",
+   "train_id": "TR-2009",
+   "number": "50376911",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376934",
+   "train_id": "TR-2009",
+   "number": "50376934",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50376970",
+   "train_id": "TR-2009",
+   "number": "50376970",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377000",
+   "train_id": "TR-2009",
+   "number": "50377000",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377015",
+   "train_id": "TR-2009",
+   "number": "50377015",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377036",
+   "train_id": "TR-2009",
+   "number": "50377036",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377048",
+   "train_id": "TR-2009",
+   "number": "50377048",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377079",
+   "train_id": "TR-2009",
+   "number": "50377079",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377113",
+   "train_id": "TR-2009",
+   "number": "50377113",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377126",
+   "train_id": "TR-2009",
+   "number": "50377126",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377138",
+   "train_id": "TR-2009",
+   "number": "50377138",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377173",
+   "train_id": "TR-2009",
+   "number": "50377173",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377177",
+   "train_id": "TR-2009",
+   "number": "50377177",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377186",
+   "train_id": "TR-2009",
+   "number": "50377186",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377187",
+   "train_id": "TR-2009",
+   "number": "50377187",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377216",
+   "train_id": "TR-2009",
+   "number": "50377216",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377220",
+   "train_id": "TR-2009",
+   "number": "50377220",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377251",
+   "train_id": "TR-2009",
+   "number": "50377251",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377277",
+   "train_id": "TR-2009",
+   "number": "50377277",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377281",
+   "train_id": "TR-2009",
+   "number": "50377281",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377318",
+   "train_id": "TR-2009",
+   "number": "50377318",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377334",
+   "train_id": "TR-2009",
+   "number": "50377334",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377361",
+   "train_id": "TR-2009",
+   "number": "50377361",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377386",
+   "train_id": "TR-2009",
+   "number": "50377386",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377406",
+   "train_id": "TR-2009",
+   "number": "50377406",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377410",
+   "train_id": "TR-2009",
+   "number": "50377410",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377424",
+   "train_id": "TR-2009",
+   "number": "50377424",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377430",
+   "train_id": "TR-2009",
+   "number": "50377430",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377466",
+   "train_id": "TR-2009",
+   "number": "50377466",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377493",
+   "train_id": "TR-2009",
+   "number": "50377493",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377524",
+   "train_id": "TR-2009",
+   "number": "50377524",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377543",
+   "train_id": "TR-2009",
+   "number": "50377543",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377573",
+   "train_id": "TR-2009",
+   "number": "50377573",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377590",
+   "train_id": "TR-2009",
+   "number": "50377590",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377625",
+   "train_id": "TR-2009",
+   "number": "50377625",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377643",
+   "train_id": "TR-2009",
+   "number": "50377643",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377654",
+   "train_id": "TR-2009",
+   "number": "50377654",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377691",
+   "train_id": "TR-2009",
+   "number": "50377691",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377721",
+   "train_id": "TR-2009",
+   "number": "50377721",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377739",
+   "train_id": "TR-2009",
+   "number": "50377739",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377742",
+   "train_id": "TR-2009",
+   "number": "50377742",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377759",
+   "train_id": "TR-2009",
+   "number": "50377759",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377796",
+   "train_id": "TR-2009",
+   "number": "50377796",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377814",
+   "train_id": "TR-2009",
+   "number": "50377814",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377826",
+   "train_id": "TR-2009",
+   "number": "50377826",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377855",
+   "train_id": "TR-2009",
+   "number": "50377855",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377883",
+   "train_id": "TR-2011",
+   "number": "50377883",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377914",
+   "train_id": "TR-2011",
+   "number": "50377914",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377935",
+   "train_id": "TR-2011",
+   "number": "50377935",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377957",
+   "train_id": "TR-2011",
+   "number": "50377957",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50377976",
+   "train_id": "TR-2011",
+   "number": "50377976",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378012",
+   "train_id": "TR-2011",
+   "number": "50378012",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378033",
+   "train_id": "TR-2011",
+   "number": "50378033",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378059",
+   "train_id": "TR-2011",
+   "number": "50378059",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378094",
+   "train_id": "TR-2011",
+   "number": "50378094",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378107",
+   "train_id": "TR-2011",
+   "number": "50378107",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378139",
+   "train_id": "TR-2011",
+   "number": "50378139",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378153",
+   "train_id": "TR-2011",
+   "number": "50378153",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378172",
+   "train_id": "TR-2011",
+   "number": "50378172",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378204",
+   "train_id": "TR-2011",
+   "number": "50378204",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378220",
+   "train_id": "TR-2011",
+   "number": "50378220",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378221",
+   "train_id": "TR-2011",
+   "number": "50378221",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378229",
+   "train_id": "TR-2011",
+   "number": "50378229",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378239",
+   "train_id": "TR-2011",
+   "number": "50378239",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378258",
+   "train_id": "TR-2011",
+   "number": "50378258",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378289",
+   "train_id": "TR-2011",
+   "number": "50378289",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378325",
+   "train_id": "TR-2011",
+   "number": "50378325",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378358",
+   "train_id": "TR-2011",
+   "number": "50378358",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378376",
+   "train_id": "TR-2011",
+   "number": "50378376",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378409",
+   "train_id": "TR-2011",
+   "number": "50378409",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378428",
+   "train_id": "TR-2011",
+   "number": "50378428",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378460",
+   "train_id": "TR-2011",
+   "number": "50378460",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378491",
+   "train_id": "TR-2011",
+   "number": "50378491",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378526",
+   "train_id": "TR-2011",
+   "number": "50378526",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378547",
+   "train_id": "TR-2011",
+   "number": "50378547",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378563",
+   "train_id": "TR-2011",
+   "number": "50378563",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378596",
+   "train_id": "TR-101",
+   "number": "50378596",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378625",
+   "train_id": "TR-101",
+   "number": "50378625",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378655",
+   "train_id": "TR-101",
+   "number": "50378655",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378682",
+   "train_id": "TR-101",
+   "number": "50378682",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378699",
+   "train_id": "TR-101",
+   "number": "50378699",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378725",
+   "train_id": "TR-101",
+   "number": "50378725",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378760",
+   "train_id": "TR-101",
+   "number": "50378760",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378792",
+   "train_id": "TR-101",
+   "number": "50378792",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378808",
+   "train_id": "TR-101",
+   "number": "50378808",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378814",
+   "train_id": "TR-101",
+   "number": "50378814",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378821",
+   "train_id": "TR-101",
+   "number": "50378821",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378841",
+   "train_id": "TR-101",
+   "number": "50378841",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378869",
+   "train_id": "TR-102",
+   "number": "50378869",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378896",
+   "train_id": "TR-102",
+   "number": "50378896",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378902",
+   "train_id": "TR-102",
+   "number": "50378902",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378918",
+   "train_id": "TR-102",
+   "number": "50378918",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378928",
+   "train_id": "TR-102",
+   "number": "50378928",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378945",
+   "train_id": "TR-102",
+   "number": "50378945",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378946",
+   "train_id": "TR-102",
+   "number": "50378946",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50378981",
+   "train_id": "TR-102",
+   "number": "50378981",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379004",
+   "train_id": "TR-102",
+   "number": "50379004",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379032",
+   "train_id": "TR-102",
+   "number": "50379032",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379052",
+   "train_id": "TR-102",
+   "number": "50379052",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379083",
+   "train_id": "TR-102",
+   "number": "50379083",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379085",
+   "train_id": "TR-103",
+   "number": "50379085",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379122",
+   "train_id": "TR-103",
+   "number": "50379122",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379154",
+   "train_id": "TR-103",
+   "number": "50379154",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379169",
+   "train_id": "TR-103",
+   "number": "50379169",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379182",
+   "train_id": "TR-103",
+   "number": "50379182",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379191",
+   "train_id": "TR-103",
+   "number": "50379191",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379194",
+   "train_id": "TR-103",
+   "number": "50379194",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379197",
+   "train_id": "TR-103",
+   "number": "50379197",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379203",
+   "train_id": "TR-103",
+   "number": "50379203",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379230",
+   "train_id": "TR-103",
+   "number": "50379230",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379265",
+   "train_id": "TR-103",
+   "number": "50379265",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379283",
+   "train_id": "TR-103",
+   "number": "50379283",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379291",
+   "train_id": "TR-104",
+   "number": "50379291",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379301",
+   "train_id": "TR-104",
+   "number": "50379301",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379327",
+   "train_id": "TR-104",
+   "number": "50379327",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379353",
+   "train_id": "TR-104",
+   "number": "50379353",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379361",
+   "train_id": "TR-104",
+   "number": "50379361",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379378",
+   "train_id": "TR-104",
+   "number": "50379378",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379402",
+   "train_id": "TR-104",
+   "number": "50379402",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379433",
+   "train_id": "TR-104",
+   "number": "50379433",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379469",
+   "train_id": "TR-104",
+   "number": "50379469",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379484",
+   "train_id": "TR-104",
+   "number": "50379484",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379514",
+   "train_id": "TR-104",
+   "number": "50379514",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379522",
+   "train_id": "TR-104",
+   "number": "50379522",
+   "length_m": 24.5,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379827",
+   "train_id": "TR-2503",
+   "number": "50379827",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379835",
+   "train_id": "TR-2503",
+   "number": "50379835",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379858",
+   "train_id": "TR-2503",
+   "number": "50379858",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379860",
+   "train_id": "TR-2503",
+   "number": "50379860",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379869",
+   "train_id": "TR-2503",
+   "number": "50379869",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379874",
+   "train_id": "TR-2503",
+   "number": "50379874",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379898",
+   "train_id": "TR-2503",
+   "number": "50379898",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379913",
+   "train_id": "TR-2503",
+   "number": "50379913",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379947",
+   "train_id": "TR-2503",
+   "number": "50379947",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379949",
+   "train_id": "TR-2503",
+   "number": "50379949",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50379975",
+   "train_id": "TR-2503",
+   "number": "50379975",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50380007",
+   "train_id": "TR-2503",
+   "number": "50380007",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50380013",
+   "train_id": "TR-2503",
+   "number": "50380013",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50380018",
+   "train_id": "TR-2503",
+   "number": "50380018",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50380054",
+   "train_id": "TR-2503",
+   "number": "50380054",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50380088",
+   "train_id": "TR-2503",
+   "number": "50380088",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50380116",
+   "train_id": "TR-2503",
+   "number": "50380116",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50380143",
+   "train_id": "TR-2505",
+   "number": "50380143",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50380169",
+   "train_id": "TR-2505",
+   "number": "50380169",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50380190",
+   "train_id": "TR-2505",
+   "number": "50380190",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50380207",
+   "train_id": "TR-2505",
+   "number": "50380207",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50380238",
+   "train_id": "TR-2505",
+   "number": "50380238",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50380244",
+   "train_id": "TR-2505",
+   "number": "50380244",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50380268",
+   "train_id": "TR-2505",
+   "number": "50380268",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50380304",
+   "train_id": "TR-2505",
+   "number": "50380304",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50380331",
+   "train_id": "TR-2505",
+   "number": "50380331",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50380359",
+   "train_id": "TR-2505",
+   "number": "50380359",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50380379",
+   "train_id": "TR-2505",
+   "number": "50380379",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50380412",
+   "train_id": "TR-2505",
+   "number": "50380412",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50380443",
+   "train_id": "TR-2505",
+   "number": "50380443",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50380466",
+   "train_id": "TR-2505",
+   "number": "50380466",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50380484",
+   "train_id": "TR-2505",
+   "number": "50380484",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50380520",
+   "train_id": "TR-2505",
+   "number": "50380520",
+   "length_m": 13.92,
+   "condition": "ok"
+  },
+  {
+   "id": "W50380538",
+   "train_id": "TR-2505",
+   "number": "50380538",
+   "length_m": 13.92,
+   "condition": "ok"
+  }
+ ],
+ "rules": [
+  {
+   "code": "MONTHLY_PLAN",
+   "name": "Месячный план обработки вагонов",
+   "unit": "вагонов",
+   "period": "календарный месяц",
+   "source": "План станции (демо, таблица plans)",
+   "rule_text": "Факт + согласованные заявки + новая заявка ≤ цель. По умолчанию превышение — предупреждение; в режиме «жёсткая квота» — отказ.",
+   "value": null,
+   "policy": "soft",
+   "active": true
+  },
+  {
+   "code": "DAILY_PROCESSING",
+   "name": "Перерабатывающая способность станции",
+   "unit": "вагонов в сутки",
+   "period": "сутки (местное время)",
+   "source": "Технико-распорядительный акт (демо)",
+   "rule_text": "Сумма вагонов, прибывающих в переработку за сутки, включая новую заявку, ≤ значения.",
+   "value": 1400.0,
+   "policy": "hard",
+   "active": true
+  },
+  {
+   "code": "ENTRY_THROUGHPUT_WEST",
+   "name": "Пропускная способность входа со стороны Отар",
+   "unit": "поездов в час",
+   "period": "скользящий час",
+   "source": "Расчёт пропускной способности (демо)",
+   "rule_text": "Число прибытий с западной стороны в часовом окне вокруг прибытия ≤ значения.",
+   "value": 4.0,
+   "policy": "hard",
+   "active": true
+  },
+  {
+   "code": "PARK_A_SIMULTANEOUS",
+   "name": "Одновременная вместимость парка А",
+   "unit": "составов одновременно",
+   "period": "интервал приёма и обработки",
+   "source": "Топология станции (пути парка А)",
+   "rule_text": "Нужен хотя бы один путь парка А, свободный на весь интервал приёма и обработки, с полезной длиной не меньше длины состава плюс запас.",
+   "value": null,
+   "policy": "hard",
+   "active": true
+  },
+  {
+   "code": "RESOURCES",
+   "name": "Доступность бригад и локомотивов",
+   "unit": "единиц ресурса",
+   "period": "интервал операции (смена бригады)",
+   "source": "Наряд смены (демо)",
+   "rule_text": "Для каждой операции есть ресурс нужного вида в смене, без пересекающихся резервов, с учётом времени перехода между зонами.",
+   "value": null,
+   "policy": "hard",
+   "active": true
+  },
+  {
+   "code": "TIME_WINDOW",
+   "name": "Возможность приёма в конкретное время",
+   "unit": "интервал времени",
+   "period": "прогнозируемое прибытие и обработка",
+   "source": "Резервы, инциденты, окна обслуживания, данные датчиков",
+   "rule_text": "Путь, маршрут и ресурсы не заняты, не закрыты и имеют достоверное состояние на весь интервал.",
+   "value": null,
+   "policy": "hard",
+   "active": true
+  }
+ ],
+ "plan": {
+  "target_wagons": 26000,
+  "actual_base_wagons": 21000,
+  "policy": "soft"
+ },
+ "reservations": [
+  {
+   "id": 1,
+   "resource_key": "track:ALM-T1",
+   "start_at": "2026-10-01T05:36:00Z",
+   "end_at": "2026-10-01T12:09:00Z",
+   "purpose": "Занятие путь 1 поездом № 2001",
+   "train_id": "TR-2001",
+   "operation_id": "OP-2001-3",
+   "request_id": null
+  },
+  {
+   "id": 2,
+   "resource_key": "switch:ALM-W1",
+   "start_at": "2026-10-01T11:56:00Z",
+   "end_at": "2026-10-01T12:04:00Z",
+   "purpose": "Отправление п. № 2001",
+   "train_id": "TR-2001",
+   "operation_id": "OP-2001-3",
+   "request_id": null
+  },
+  {
+   "id": 3,
+   "resource_key": "switch:ALM-W0",
+   "start_at": "2026-10-01T11:56:00Z",
+   "end_at": "2026-10-01T12:04:00Z",
+   "purpose": "Отправление п. № 2001",
+   "train_id": "TR-2001",
+   "operation_id": "OP-2001-3",
+   "request_id": null
+  },
+  {
+   "id": 4,
+   "resource_key": "track:ALM-T2",
+   "start_at": "2026-10-01T05:54:00Z",
+   "end_at": "2026-10-01T08:57:00Z",
+   "purpose": "Занятие путь 2 поездом № 2003",
+   "train_id": "TR-2003",
+   "operation_id": "OP-2003-3",
+   "request_id": null
+  },
+  {
+   "id": 5,
+   "resource_key": "switch:ALM-W2",
+   "start_at": "2026-10-01T08:44:00Z",
+   "end_at": "2026-10-01T08:52:00Z",
+   "purpose": "Отправление п. № 2003",
+   "train_id": "TR-2003",
+   "operation_id": "OP-2003-3",
+   "request_id": null
+  },
+  {
+   "id": 6,
+   "resource_key": "switch:ALM-W1",
+   "start_at": "2026-10-01T08:44:00Z",
+   "end_at": "2026-10-01T08:52:00Z",
+   "purpose": "Отправление п. № 2003",
+   "train_id": "TR-2003",
+   "operation_id": "OP-2003-3",
+   "request_id": null
+  },
+  {
+   "id": 7,
+   "resource_key": "switch:ALM-W0",
+   "start_at": "2026-10-01T08:44:00Z",
+   "end_at": "2026-10-01T08:52:00Z",
+   "purpose": "Отправление п. № 2003",
+   "train_id": "TR-2003",
+   "operation_id": "OP-2003-3",
+   "request_id": null
+  },
+  {
+   "id": 8,
+   "resource_key": "track:ALM-T3",
+   "start_at": "2026-10-01T06:04:00Z",
+   "end_at": "2026-10-01T12:23:00Z",
+   "purpose": "Занятие путь 3 поездом № 2005",
+   "train_id": "TR-2005",
+   "operation_id": "OP-2005-3",
+   "request_id": null
+  },
+  {
+   "id": 9,
+   "resource_key": "switch:ALM-W3",
+   "start_at": "2026-10-01T12:10:00Z",
+   "end_at": "2026-10-01T12:18:00Z",
+   "purpose": "Отправление п. № 2005",
+   "train_id": "TR-2005",
+   "operation_id": "OP-2005-3",
+   "request_id": null
+  },
+  {
+   "id": 10,
+   "resource_key": "switch:ALM-W2",
+   "start_at": "2026-10-01T12:10:00Z",
+   "end_at": "2026-10-01T12:18:00Z",
+   "purpose": "Отправление п. № 2005",
+   "train_id": "TR-2005",
+   "operation_id": "OP-2005-3",
+   "request_id": null
+  },
+  {
+   "id": 11,
+   "resource_key": "switch:ALM-W1",
+   "start_at": "2026-10-01T12:10:00Z",
+   "end_at": "2026-10-01T12:18:00Z",
+   "purpose": "Отправление п. № 2005",
+   "train_id": "TR-2005",
+   "operation_id": "OP-2005-3",
+   "request_id": null
+  },
+  {
+   "id": 12,
+   "resource_key": "switch:ALM-W0",
+   "start_at": "2026-10-01T12:10:00Z",
+   "end_at": "2026-10-01T12:18:00Z",
+   "purpose": "Отправление п. № 2005",
+   "train_id": "TR-2005",
+   "operation_id": "OP-2005-3",
+   "request_id": null
+  },
+  {
+   "id": 13,
+   "resource_key": "track:ALM-T4",
+   "start_at": "2026-10-01T06:14:00Z",
+   "end_at": "2026-10-01T12:31:00Z",
+   "purpose": "Занятие путь 4 поездом № 2007",
+   "train_id": "TR-2007",
+   "operation_id": "OP-2007-2",
+   "request_id": null
+  },
+  {
+   "id": 14,
+   "resource_key": "res:IT-1",
+   "start_at": "2026-10-01T06:26:00Z",
+   "end_at": "2026-10-01T07:06:00Z",
+   "purpose": "Техосмотр п. № 2007",
+   "train_id": "TR-2007",
+   "operation_id": "OP-2007-2",
+   "request_id": null
+  },
+  {
+   "id": 15,
+   "resource_key": "switch:ALM-W4",
+   "start_at": "2026-10-01T12:18:00Z",
+   "end_at": "2026-10-01T12:26:00Z",
+   "purpose": "Отправление п. № 2007",
+   "train_id": "TR-2007",
+   "operation_id": "OP-2007-3",
+   "request_id": null
+  },
+  {
+   "id": 16,
+   "resource_key": "switch:ALM-W3",
+   "start_at": "2026-10-01T12:18:00Z",
+   "end_at": "2026-10-01T12:26:00Z",
+   "purpose": "Отправление п. № 2007",
+   "train_id": "TR-2007",
+   "operation_id": "OP-2007-3",
+   "request_id": null
+  },
+  {
+   "id": 17,
+   "resource_key": "switch:ALM-W2",
+   "start_at": "2026-10-01T12:18:00Z",
+   "end_at": "2026-10-01T12:26:00Z",
+   "purpose": "Отправление п. № 2007",
+   "train_id": "TR-2007",
+   "operation_id": "OP-2007-3",
+   "request_id": null
+  },
+  {
+   "id": 18,
+   "resource_key": "switch:ALM-W1",
+   "start_at": "2026-10-01T12:18:00Z",
+   "end_at": "2026-10-01T12:26:00Z",
+   "purpose": "Отправление п. № 2007",
+   "train_id": "TR-2007",
+   "operation_id": "OP-2007-3",
+   "request_id": null
+  },
+  {
+   "id": 19,
+   "resource_key": "switch:ALM-W0",
+   "start_at": "2026-10-01T12:18:00Z",
+   "end_at": "2026-10-01T12:26:00Z",
+   "purpose": "Отправление п. № 2007",
+   "train_id": "TR-2007",
+   "operation_id": "OP-2007-3",
+   "request_id": null
+  },
+  {
+   "id": 20,
+   "resource_key": "track:ALM-T5",
+   "start_at": "2026-10-01T06:24:00Z",
+   "end_at": "2026-10-01T12:39:00Z",
+   "purpose": "Занятие путь 5 поездом № 2009",
+   "train_id": "TR-2009",
+   "operation_id": "OP-2009-2",
+   "request_id": null
+  },
+  {
+   "id": 21,
+   "resource_key": "res:IT-2",
+   "start_at": "2026-10-01T06:44:00Z",
+   "end_at": "2026-10-01T07:24:00Z",
+   "purpose": "Техосмотр п. № 2009",
+   "train_id": "TR-2009",
+   "operation_id": "OP-2009-2",
+   "request_id": null
+  },
+  {
+   "id": 22,
+   "resource_key": "switch:ALM-W5",
+   "start_at": "2026-10-01T12:26:00Z",
+   "end_at": "2026-10-01T12:34:00Z",
+   "purpose": "Отправление п. № 2009",
+   "train_id": "TR-2009",
+   "operation_id": "OP-2009-3",
+   "request_id": null
+  },
+  {
+   "id": 23,
+   "resource_key": "switch:ALM-W4",
+   "start_at": "2026-10-01T12:26:00Z",
+   "end_at": "2026-10-01T12:34:00Z",
+   "purpose": "Отправление п. № 2009",
+   "train_id": "TR-2009",
+   "operation_id": "OP-2009-3",
+   "request_id": null
+  },
+  {
+   "id": 24,
+   "resource_key": "switch:ALM-W3",
+   "start_at": "2026-10-01T12:26:00Z",
+   "end_at": "2026-10-01T12:34:00Z",
+   "purpose": "Отправление п. № 2009",
+   "train_id": "TR-2009",
+   "operation_id": "OP-2009-3",
+   "request_id": null
+  },
+  {
+   "id": 25,
+   "resource_key": "switch:ALM-W2",
+   "start_at": "2026-10-01T12:26:00Z",
+   "end_at": "2026-10-01T12:34:00Z",
+   "purpose": "Отправление п. № 2009",
+   "train_id": "TR-2009",
+   "operation_id": "OP-2009-3",
+   "request_id": null
+  },
+  {
+   "id": 26,
+   "resource_key": "switch:ALM-W1",
+   "start_at": "2026-10-01T12:26:00Z",
+   "end_at": "2026-10-01T12:34:00Z",
+   "purpose": "Отправление п. № 2009",
+   "train_id": "TR-2009",
+   "operation_id": "OP-2009-3",
+   "request_id": null
+  },
+  {
+   "id": 27,
+   "resource_key": "switch:ALM-W0",
+   "start_at": "2026-10-01T12:26:00Z",
+   "end_at": "2026-10-01T12:34:00Z",
+   "purpose": "Отправление п. № 2009",
+   "train_id": "TR-2009",
+   "operation_id": "OP-2009-3",
+   "request_id": null
+  },
+  {
+   "id": 28,
+   "resource_key": "track:ALM-T6",
+   "start_at": "2026-10-01T06:34:00Z",
+   "end_at": "2026-10-01T12:47:00Z",
+   "purpose": "Занятие путь 6 поездом № 2011",
+   "train_id": "TR-2011",
+   "operation_id": "OP-2011-2",
+   "request_id": null
+  },
+  {
+   "id": 29,
+   "resource_key": "res:IT-3",
+   "start_at": "2026-10-01T06:54:00Z",
+   "end_at": "2026-10-01T07:34:00Z",
+   "purpose": "Техосмотр п. № 2011",
+   "train_id": "TR-2011",
+   "operation_id": "OP-2011-2",
+   "request_id": null
+  },
+  {
+   "id": 30,
+   "resource_key": "switch:ALM-W6",
+   "start_at": "2026-10-01T12:34:00Z",
+   "end_at": "2026-10-01T12:42:00Z",
+   "purpose": "Отправление п. № 2011",
+   "train_id": "TR-2011",
+   "operation_id": "OP-2011-3",
+   "request_id": null
+  },
+  {
+   "id": 31,
+   "resource_key": "switch:ALM-W5",
+   "start_at": "2026-10-01T12:34:00Z",
+   "end_at": "2026-10-01T12:42:00Z",
+   "purpose": "Отправление п. № 2011",
+   "train_id": "TR-2011",
+   "operation_id": "OP-2011-3",
+   "request_id": null
+  },
+  {
+   "id": 32,
+   "resource_key": "switch:ALM-W4",
+   "start_at": "2026-10-01T12:34:00Z",
+   "end_at": "2026-10-01T12:42:00Z",
+   "purpose": "Отправление п. № 2011",
+   "train_id": "TR-2011",
+   "operation_id": "OP-2011-3",
+   "request_id": null
+  },
+  {
+   "id": 33,
+   "resource_key": "switch:ALM-W3",
+   "start_at": "2026-10-01T12:34:00Z",
+   "end_at": "2026-10-01T12:42:00Z",
+   "purpose": "Отправление п. № 2011",
+   "train_id": "TR-2011",
+   "operation_id": "OP-2011-3",
+   "request_id": null
+  },
+  {
+   "id": 34,
+   "resource_key": "switch:ALM-W2",
+   "start_at": "2026-10-01T12:34:00Z",
+   "end_at": "2026-10-01T12:42:00Z",
+   "purpose": "Отправление п. № 2011",
+   "train_id": "TR-2011",
+   "operation_id": "OP-2011-3",
+   "request_id": null
+  },
+  {
+   "id": 35,
+   "resource_key": "switch:ALM-W1",
+   "start_at": "2026-10-01T12:34:00Z",
+   "end_at": "2026-10-01T12:42:00Z",
+   "purpose": "Отправление п. № 2011",
+   "train_id": "TR-2011",
+   "operation_id": "OP-2011-3",
+   "request_id": null
+  },
+  {
+   "id": 36,
+   "resource_key": "switch:ALM-W0",
+   "start_at": "2026-10-01T12:34:00Z",
+   "end_at": "2026-10-01T12:42:00Z",
+   "purpose": "Отправление п. № 2011",
+   "train_id": "TR-2011",
+   "operation_id": "OP-2011-3",
+   "request_id": null
+  },
+  {
+   "id": 37,
+   "resource_key": "track:ALM-TI",
+   "start_at": "2026-10-01T11:33:00Z",
+   "end_at": "2026-10-01T11:56:00Z",
+   "purpose": "Занятие главный путь I поездом № 102",
+   "train_id": "TR-102",
+   "operation_id": "OP-102-1",
+   "request_id": null
+  },
+  {
+   "id": 38,
+   "resource_key": "switch:ALM-W0",
+   "start_at": "2026-10-01T11:33:00Z",
+   "end_at": "2026-10-01T11:37:00Z",
+   "purpose": "Прибытие п. № 102",
+   "train_id": "TR-102",
+   "operation_id": "OP-102-1",
+   "request_id": null
+  },
+  {
+   "id": 39,
+   "resource_key": "switch:ALM-E0",
+   "start_at": "2026-10-01T11:47:00Z",
+   "end_at": "2026-10-01T11:51:00Z",
+   "purpose": "Отправление п. № 102",
+   "train_id": "TR-102",
+   "operation_id": "OP-102-3",
+   "request_id": null
+  },
+  {
+   "id": 40,
+   "resource_key": "track:ALM-TI",
+   "start_at": "2026-10-01T11:56:00Z",
+   "end_at": "2026-10-01T12:51:00Z",
+   "purpose": "Занятие главный путь I поездом № 103",
+   "train_id": "TR-103",
+   "operation_id": "OP-103-1",
+   "request_id": null
+  },
+  {
+   "id": 41,
+   "resource_key": "switch:ALM-E0",
+   "start_at": "2026-10-01T11:56:00Z",
+   "end_at": "2026-10-01T12:00:00Z",
+   "purpose": "Прибытие п. № 103",
+   "train_id": "TR-103",
+   "operation_id": "OP-103-1",
+   "request_id": null
+  },
+  {
+   "id": 42,
+   "resource_key": "switch:ALM-W0",
+   "start_at": "2026-10-01T12:42:00Z",
+   "end_at": "2026-10-01T12:46:00Z",
+   "purpose": "Отправление п. № 103",
+   "train_id": "TR-103",
+   "operation_id": "OP-103-3",
+   "request_id": null
+  },
+  {
+   "id": 43,
+   "resource_key": "track:ALM-TI",
+   "start_at": "2026-10-01T12:51:00Z",
+   "end_at": "2026-10-01T13:14:00Z",
+   "purpose": "Занятие главный путь I поездом № 104",
+   "train_id": "TR-104",
+   "operation_id": "OP-104-1",
+   "request_id": null
+  },
+  {
+   "id": 44,
+   "resource_key": "switch:ALM-E0",
+   "start_at": "2026-10-01T12:51:00Z",
+   "end_at": "2026-10-01T12:55:00Z",
+   "purpose": "Прибытие п. № 104",
+   "train_id": "TR-104",
+   "operation_id": "OP-104-1",
+   "request_id": null
+  },
+  {
+   "id": 45,
+   "resource_key": "switch:ALM-W0",
+   "start_at": "2026-10-01T13:05:00Z",
+   "end_at": "2026-10-01T13:09:00Z",
+   "purpose": "Отправление п. № 104",
+   "train_id": "TR-104",
+   "operation_id": "OP-104-3",
+   "request_id": null
+  },
+  {
+   "id": 46,
+   "resource_key": "track:ALM-T6",
+   "start_at": "2026-10-01T12:47:00Z",
+   "end_at": "2026-10-01T13:47:00Z",
+   "purpose": "Занятие путь 6 поездом № 2503",
+   "train_id": "TR-2503",
+   "operation_id": "OP-2503-1",
+   "request_id": null
+  },
+  {
+   "id": 47,
+   "resource_key": "track:ALM-T14",
+   "start_at": "2026-10-01T13:27:00Z",
+   "end_at": "2026-10-01T16:02:00Z",
+   "purpose": "Занятие путь 14 поездом № 2503",
+   "train_id": "TR-2503",
+   "operation_id": "OP-2503-3",
+   "request_id": null
+  },
+  {
+   "id": 48,
+   "resource_key": "track:ALM-T6",
+   "start_at": "2026-10-01T15:42:00Z",
+   "end_at": "2026-10-01T16:10:00Z",
+   "purpose": "Занятие путь 6 поездом № 2503",
+   "train_id": "TR-2503",
+   "operation_id": "OP-2503-5",
+   "request_id": null
+  },
+  {
+   "id": 49,
+   "resource_key": "switch:ALM-W0",
+   "start_at": "2026-10-01T12:47:00Z",
+   "end_at": "2026-10-01T12:57:00Z",
+   "purpose": "Прибытие п. № 2503",
+   "train_id": "TR-2503",
+   "operation_id": "OP-2503-1",
+   "request_id": null
+  },
+  {
+   "id": 50,
+   "resource_key": "switch:ALM-W1",
+   "start_at": "2026-10-01T12:47:00Z",
+   "end_at": "2026-10-01T12:57:00Z",
+   "purpose": "Прибытие п. № 2503",
+   "train_id": "TR-2503",
+   "operation_id": "OP-2503-1",
+   "request_id": null
+  },
+  {
+   "id": 51,
+   "resource_key": "switch:ALM-W2",
+   "start_at": "2026-10-01T12:47:00Z",
+   "end_at": "2026-10-01T12:57:00Z",
+   "purpose": "Прибытие п. № 2503",
+   "train_id": "TR-2503",
+   "operation_id": "OP-2503-1",
+   "request_id": null
+  },
+  {
+   "id": 52,
+   "resource_key": "switch:ALM-W3",
+   "start_at": "2026-10-01T12:47:00Z",
+   "end_at": "2026-10-01T12:57:00Z",
+   "purpose": "Прибытие п. № 2503",
+   "train_id": "TR-2503",
+   "operation_id": "OP-2503-1",
+   "request_id": null
+  },
+  {
+   "id": 53,
+   "resource_key": "switch:ALM-W4",
+   "start_at": "2026-10-01T12:47:00Z",
+   "end_at": "2026-10-01T12:57:00Z",
+   "purpose": "Прибытие п. № 2503",
+   "train_id": "TR-2503",
+   "operation_id": "OP-2503-1",
+   "request_id": null
+  },
+  {
+   "id": 54,
+   "resource_key": "switch:ALM-W5",
+   "start_at": "2026-10-01T12:47:00Z",
+   "end_at": "2026-10-01T12:57:00Z",
+   "purpose": "Прибытие п. № 2503",
+   "train_id": "TR-2503",
+   "operation_id": "OP-2503-1",
+   "request_id": null
+  },
+  {
+   "id": 55,
+   "resource_key": "switch:ALM-W6",
+   "start_at": "2026-10-01T12:47:00Z",
+   "end_at": "2026-10-01T12:57:00Z",
+   "purpose": "Прибытие п. № 2503",
+   "train_id": "TR-2503",
+   "operation_id": "OP-2503-1",
+   "request_id": null
+  },
+  {
+   "id": 56,
+   "resource_key": "res:IT-1",
+   "start_at": "2026-10-01T12:57:00Z",
+   "end_at": "2026-10-01T13:27:00Z",
+   "purpose": "Техосмотр п. № 2503",
+   "train_id": "TR-2503",
+   "operation_id": "OP-2503-2",
+   "request_id": null
+  },
+  {
+   "id": 57,
+   "resource_key": "switch:ALM-E6",
+   "start_at": "2026-10-01T13:27:00Z",
+   "end_at": "2026-10-01T13:42:00Z",
+   "purpose": "Манёвры п. № 2503",
+   "train_id": "TR-2503",
+   "operation_id": "OP-2503-3",
+   "request_id": null
+  },
+  {
+   "id": 58,
+   "resource_key": "switch:ALM-E11",
+   "start_at": "2026-10-01T13:27:00Z",
+   "end_at": "2026-10-01T13:42:00Z",
+   "purpose": "Манёвры п. № 2503",
+   "train_id": "TR-2503",
+   "operation_id": "OP-2503-3",
+   "request_id": null
+  },
+  {
+   "id": 59,
+   "resource_key": "switch:ALM-E12",
+   "start_at": "2026-10-01T13:27:00Z",
+   "end_at": "2026-10-01T13:42:00Z",
+   "purpose": "Манёвры п. № 2503",
+   "train_id": "TR-2503",
+   "operation_id": "OP-2503-3",
+   "request_id": null
+  },
+  {
+   "id": 60,
+   "resource_key": "res:ML-1",
+   "start_at": "2026-10-01T13:22:00Z",
+   "end_at": "2026-10-01T13:42:00Z",
+   "purpose": "Манёвры п. № 2503",
+   "train_id": "TR-2503",
+   "operation_id": "OP-2503-3",
+   "request_id": null
+  },
+  {
+   "id": 61,
+   "resource_key": "res:LB-1",
+   "start_at": "2026-10-01T13:22:00Z",
+   "end_at": "2026-10-01T13:42:00Z",
+   "purpose": "Манёвры п. № 2503",
+   "train_id": "TR-2503",
+   "operation_id": "OP-2503-3",
+   "request_id": null
+  },
+  {
+   "id": 62,
+   "resource_key": "res:SB-1",
+   "start_at": "2026-10-01T13:22:00Z",
+   "end_at": "2026-10-01T13:42:00Z",
+   "purpose": "Манёвры п. № 2503",
+   "train_id": "TR-2503",
+   "operation_id": "OP-2503-3",
+   "request_id": null
+  },
+  {
+   "id": 63,
+   "resource_key": "res:KK-1",
+   "start_at": "2026-10-01T13:37:00Z",
+   "end_at": "2026-10-01T15:42:00Z",
+   "purpose": "Выгрузка п. № 2503",
+   "train_id": "TR-2503",
+   "operation_id": "OP-2503-4",
+   "request_id": null
+  },
+  {
+   "id": 64,
+   "resource_key": "switch:ALM-E12",
+   "start_at": "2026-10-01T15:42:00Z",
+   "end_at": "2026-10-01T15:57:00Z",
+   "purpose": "Манёвры п. № 2503",
+   "train_id": "TR-2503",
+   "operation_id": "OP-2503-5",
+   "request_id": null
+  },
+  {
+   "id": 65,
+   "resource_key": "switch:ALM-E11",
+   "start_at": "2026-10-01T15:42:00Z",
+   "end_at": "2026-10-01T15:57:00Z",
+   "purpose": "Манёвры п. № 2503",
+   "train_id": "TR-2503",
+   "operation_id": "OP-2503-5",
+   "request_id": null
+  },
+  {
+   "id": 66,
+   "resource_key": "switch:ALM-E6",
+   "start_at": "2026-10-01T15:42:00Z",
+   "end_at": "2026-10-01T15:57:00Z",
+   "purpose": "Манёвры п. № 2503",
+   "train_id": "TR-2503",
+   "operation_id": "OP-2503-5",
+   "request_id": null
+  },
+  {
+   "id": 67,
+   "resource_key": "res:ML-1",
+   "start_at": "2026-10-01T15:42:00Z",
+   "end_at": "2026-10-01T15:57:00Z",
+   "purpose": "Манёвры п. № 2503",
+   "train_id": "TR-2503",
+   "operation_id": "OP-2503-5",
+   "request_id": null
+  },
+  {
+   "id": 68,
+   "resource_key": "res:LB-3",
+   "start_at": "2026-10-01T15:42:00Z",
+   "end_at": "2026-10-01T15:57:00Z",
+   "purpose": "Манёвры п. № 2503",
+   "train_id": "TR-2503",
+   "operation_id": "OP-2503-5",
+   "request_id": null
+  },
+  {
+   "id": 69,
+   "resource_key": "res:SB-2",
+   "start_at": "2026-10-01T15:42:00Z",
+   "end_at": "2026-10-01T15:57:00Z",
+   "purpose": "Манёвры п. № 2503",
+   "train_id": "TR-2503",
+   "operation_id": "OP-2503-5",
+   "request_id": null
+  },
+  {
+   "id": 70,
+   "resource_key": "switch:ALM-E6",
+   "start_at": "2026-10-01T15:57:00Z",
+   "end_at": "2026-10-01T16:05:00Z",
+   "purpose": "Отправление п. № 2503",
+   "train_id": "TR-2503",
+   "operation_id": "OP-2503-6",
+   "request_id": null
+  },
+  {
+   "id": 71,
+   "resource_key": "switch:ALM-E5",
+   "start_at": "2026-10-01T15:57:00Z",
+   "end_at": "2026-10-01T16:05:00Z",
+   "purpose": "Отправление п. № 2503",
+   "train_id": "TR-2503",
+   "operation_id": "OP-2503-6",
+   "request_id": null
+  },
+  {
+   "id": 72,
+   "resource_key": "switch:ALM-E4",
+   "start_at": "2026-10-01T15:57:00Z",
+   "end_at": "2026-10-01T16:05:00Z",
+   "purpose": "Отправление п. № 2503",
+   "train_id": "TR-2503",
+   "operation_id": "OP-2503-6",
+   "request_id": null
+  },
+  {
+   "id": 73,
+   "resource_key": "switch:ALM-E3",
+   "start_at": "2026-10-01T15:57:00Z",
+   "end_at": "2026-10-01T16:05:00Z",
+   "purpose": "Отправление п. № 2503",
+   "train_id": "TR-2503",
+   "operation_id": "OP-2503-6",
+   "request_id": null
+  },
+  {
+   "id": 74,
+   "resource_key": "switch:ALM-E2",
+   "start_at": "2026-10-01T15:57:00Z",
+   "end_at": "2026-10-01T16:05:00Z",
+   "purpose": "Отправление п. № 2503",
+   "train_id": "TR-2503",
+   "operation_id": "OP-2503-6",
+   "request_id": null
+  },
+  {
+   "id": 75,
+   "resource_key": "switch:ALM-E1",
+   "start_at": "2026-10-01T15:57:00Z",
+   "end_at": "2026-10-01T16:05:00Z",
+   "purpose": "Отправление п. № 2503",
+   "train_id": "TR-2503",
+   "operation_id": "OP-2503-6",
+   "request_id": null
+  },
+  {
+   "id": 76,
+   "resource_key": "switch:ALM-E0",
+   "start_at": "2026-10-01T15:57:00Z",
+   "end_at": "2026-10-01T16:05:00Z",
+   "purpose": "Отправление п. № 2503",
+   "train_id": "TR-2503",
+   "operation_id": "OP-2503-6",
+   "request_id": null
+  },
+  {
+   "id": 77,
+   "resource_key": "track:ALM-T6",
+   "start_at": "2026-10-01T13:47:00Z",
+   "end_at": "2026-10-01T14:47:00Z",
+   "purpose": "Занятие путь 6 поездом № 2505",
+   "train_id": "TR-2505",
+   "operation_id": "OP-2505-1",
+   "request_id": null
+  },
+  {
+   "id": 78,
+   "resource_key": "track:ALM-T13",
+   "start_at": "2026-10-01T14:27:00Z",
+   "end_at": "2026-10-01T17:02:00Z",
+   "purpose": "Занятие путь 13 поездом № 2505",
+   "train_id": "TR-2505",
+   "operation_id": "OP-2505-3",
+   "request_id": null
+  },
+  {
+   "id": 79,
+   "resource_key": "track:ALM-T6",
+   "start_at": "2026-10-01T16:42:00Z",
+   "end_at": "2026-10-01T17:10:00Z",
+   "purpose": "Занятие путь 6 поездом № 2505",
+   "train_id": "TR-2505",
+   "operation_id": "OP-2505-5",
+   "request_id": null
+  },
+  {
+   "id": 80,
+   "resource_key": "switch:ALM-W0",
+   "start_at": "2026-10-01T13:47:00Z",
+   "end_at": "2026-10-01T13:57:00Z",
+   "purpose": "Прибытие п. № 2505",
+   "train_id": "TR-2505",
+   "operation_id": "OP-2505-1",
+   "request_id": null
+  },
+  {
+   "id": 81,
+   "resource_key": "switch:ALM-W1",
+   "start_at": "2026-10-01T13:47:00Z",
+   "end_at": "2026-10-01T13:57:00Z",
+   "purpose": "Прибытие п. № 2505",
+   "train_id": "TR-2505",
+   "operation_id": "OP-2505-1",
+   "request_id": null
+  },
+  {
+   "id": 82,
+   "resource_key": "switch:ALM-W2",
+   "start_at": "2026-10-01T13:47:00Z",
+   "end_at": "2026-10-01T13:57:00Z",
+   "purpose": "Прибытие п. № 2505",
+   "train_id": "TR-2505",
+   "operation_id": "OP-2505-1",
+   "request_id": null
+  },
+  {
+   "id": 83,
+   "resource_key": "switch:ALM-W3",
+   "start_at": "2026-10-01T13:47:00Z",
+   "end_at": "2026-10-01T13:57:00Z",
+   "purpose": "Прибытие п. № 2505",
+   "train_id": "TR-2505",
+   "operation_id": "OP-2505-1",
+   "request_id": null
+  },
+  {
+   "id": 84,
+   "resource_key": "switch:ALM-W4",
+   "start_at": "2026-10-01T13:47:00Z",
+   "end_at": "2026-10-01T13:57:00Z",
+   "purpose": "Прибытие п. № 2505",
+   "train_id": "TR-2505",
+   "operation_id": "OP-2505-1",
+   "request_id": null
+  },
+  {
+   "id": 85,
+   "resource_key": "switch:ALM-W5",
+   "start_at": "2026-10-01T13:47:00Z",
+   "end_at": "2026-10-01T13:57:00Z",
+   "purpose": "Прибытие п. № 2505",
+   "train_id": "TR-2505",
+   "operation_id": "OP-2505-1",
+   "request_id": null
+  },
+  {
+   "id": 86,
+   "resource_key": "switch:ALM-W6",
+   "start_at": "2026-10-01T13:47:00Z",
+   "end_at": "2026-10-01T13:57:00Z",
+   "purpose": "Прибытие п. № 2505",
+   "train_id": "TR-2505",
+   "operation_id": "OP-2505-1",
+   "request_id": null
+  },
+  {
+   "id": 87,
+   "resource_key": "res:IT-1",
+   "start_at": "2026-10-01T13:57:00Z",
+   "end_at": "2026-10-01T14:27:00Z",
+   "purpose": "Техосмотр п. № 2505",
+   "train_id": "TR-2505",
+   "operation_id": "OP-2505-2",
+   "request_id": null
+  },
+  {
+   "id": 88,
+   "resource_key": "switch:ALM-E6",
+   "start_at": "2026-10-01T14:27:00Z",
+   "end_at": "2026-10-01T14:42:00Z",
+   "purpose": "Манёвры п. № 2505",
+   "train_id": "TR-2505",
+   "operation_id": "OP-2505-3",
+   "request_id": null
+  },
+  {
+   "id": 89,
+   "resource_key": "switch:ALM-E11",
+   "start_at": "2026-10-01T14:27:00Z",
+   "end_at": "2026-10-01T14:42:00Z",
+   "purpose": "Манёвры п. № 2505",
+   "train_id": "TR-2505",
+   "operation_id": "OP-2505-3",
+   "request_id": null
+  },
+  {
+   "id": 90,
+   "resource_key": "res:ML-1",
+   "start_at": "2026-10-01T14:19:00Z",
+   "end_at": "2026-10-01T14:42:00Z",
+   "purpose": "Манёвры п. № 2505",
+   "train_id": "TR-2505",
+   "operation_id": "OP-2505-3",
+   "request_id": null
+  },
+  {
+   "id": 91,
+   "resource_key": "res:LB-1",
+   "start_at": "2026-10-01T14:19:00Z",
+   "end_at": "2026-10-01T14:42:00Z",
+   "purpose": "Манёвры п. № 2505",
+   "train_id": "TR-2505",
+   "operation_id": "OP-2505-3",
+   "request_id": null
+  },
+  {
+   "id": 92,
+   "resource_key": "res:SB-1",
+   "start_at": "2026-10-01T14:19:00Z",
+   "end_at": "2026-10-01T14:42:00Z",
+   "purpose": "Манёвры п. № 2505",
+   "train_id": "TR-2505",
+   "operation_id": "OP-2505-3",
+   "request_id": null
+  },
+  {
+   "id": 93,
+   "resource_key": "res:PG-1",
+   "start_at": "2026-10-01T14:37:00Z",
+   "end_at": "2026-10-01T16:42:00Z",
+   "purpose": "Выгрузка п. № 2505",
+   "train_id": "TR-2505",
+   "operation_id": "OP-2505-4",
+   "request_id": null
+  },
+  {
+   "id": 94,
+   "resource_key": "switch:ALM-E11",
+   "start_at": "2026-10-01T16:42:00Z",
+   "end_at": "2026-10-01T16:57:00Z",
+   "purpose": "Манёвры п. № 2505",
+   "train_id": "TR-2505",
+   "operation_id": "OP-2505-5",
+   "request_id": null
+  },
+  {
+   "id": 95,
+   "resource_key": "switch:ALM-E6",
+   "start_at": "2026-10-01T16:42:00Z",
+   "end_at": "2026-10-01T16:57:00Z",
+   "purpose": "Манёвры п. № 2505",
+   "train_id": "TR-2505",
+   "operation_id": "OP-2505-5",
+   "request_id": null
+  },
+  {
+   "id": 96,
+   "resource_key": "res:ML-1",
+   "start_at": "2026-10-01T16:42:00Z",
+   "end_at": "2026-10-01T16:57:00Z",
+   "purpose": "Манёвры п. № 2505",
+   "train_id": "TR-2505",
+   "operation_id": "OP-2505-5",
+   "request_id": null
+  },
+  {
+   "id": 97,
+   "resource_key": "res:LB-3",
+   "start_at": "2026-10-01T16:42:00Z",
+   "end_at": "2026-10-01T16:57:00Z",
+   "purpose": "Манёвры п. № 2505",
+   "train_id": "TR-2505",
+   "operation_id": "OP-2505-5",
+   "request_id": null
+  },
+  {
+   "id": 98,
+   "resource_key": "res:SB-2",
+   "start_at": "2026-10-01T16:42:00Z",
+   "end_at": "2026-10-01T16:57:00Z",
+   "purpose": "Манёвры п. № 2505",
+   "train_id": "TR-2505",
+   "operation_id": "OP-2505-5",
+   "request_id": null
+  },
+  {
+   "id": 99,
+   "resource_key": "switch:ALM-E6",
+   "start_at": "2026-10-01T16:57:00Z",
+   "end_at": "2026-10-01T17:05:00Z",
+   "purpose": "Отправление п. № 2505",
+   "train_id": "TR-2505",
+   "operation_id": "OP-2505-6",
+   "request_id": null
+  },
+  {
+   "id": 100,
+   "resource_key": "switch:ALM-E5",
+   "start_at": "2026-10-01T16:57:00Z",
+   "end_at": "2026-10-01T17:05:00Z",
+   "purpose": "Отправление п. № 2505",
+   "train_id": "TR-2505",
+   "operation_id": "OP-2505-6",
+   "request_id": null
+  },
+  {
+   "id": 101,
+   "resource_key": "switch:ALM-E4",
+   "start_at": "2026-10-01T16:57:00Z",
+   "end_at": "2026-10-01T17:05:00Z",
+   "purpose": "Отправление п. № 2505",
+   "train_id": "TR-2505",
+   "operation_id": "OP-2505-6",
+   "request_id": null
+  },
+  {
+   "id": 102,
+   "resource_key": "switch:ALM-E3",
+   "start_at": "2026-10-01T16:57:00Z",
+   "end_at": "2026-10-01T17:05:00Z",
+   "purpose": "Отправление п. № 2505",
+   "train_id": "TR-2505",
+   "operation_id": "OP-2505-6",
+   "request_id": null
+  },
+  {
+   "id": 103,
+   "resource_key": "switch:ALM-E2",
+   "start_at": "2026-10-01T16:57:00Z",
+   "end_at": "2026-10-01T17:05:00Z",
+   "purpose": "Отправление п. № 2505",
+   "train_id": "TR-2505",
+   "operation_id": "OP-2505-6",
+   "request_id": null
+  },
+  {
+   "id": 104,
+   "resource_key": "switch:ALM-E1",
+   "start_at": "2026-10-01T16:57:00Z",
+   "end_at": "2026-10-01T17:05:00Z",
+   "purpose": "Отправление п. № 2505",
+   "train_id": "TR-2505",
+   "operation_id": "OP-2505-6",
+   "request_id": null
+  },
+  {
+   "id": 105,
+   "resource_key": "switch:ALM-E0",
+   "start_at": "2026-10-01T16:57:00Z",
+   "end_at": "2026-10-01T17:05:00Z",
+   "purpose": "Отправление п. № 2505",
+   "train_id": "TR-2505",
+   "operation_id": "OP-2505-6",
+   "request_id": null
+  }
+ ],
+ "data_states": {
+  "ALM-TI": {
+   "device_id": "ALM-TC-I",
+   "device_name": "Рельсовая цепь, главный путь i",
+   "stale_after_s": 8.0,
+   "observed": "free",
+   "age_s": 0.5,
+   "observed_at": "2026-10-07T18:00:44.960468+00:00",
+   "received_at": "2026-10-07T18:00:44.960468+00:00",
+   "latency_ms": 0.0,
+   "state": "actual",
+   "message": "Данные актуальны."
+  },
+  "ALM-T1": {
+   "device_id": "ALM-TC-1",
+   "device_name": "Рельсовая цепь, путь 1",
+   "stale_after_s": 8.0,
+   "observed": "occupied",
+   "age_s": 0.5,
+   "observed_at": "2026-10-07T18:00:44.960468+00:00",
+   "received_at": "2026-10-07T18:00:44.960468+00:00",
+   "latency_ms": 0.0,
+   "state": "actual",
+   "message": "Данные актуальны."
+  },
+  "ALM-T2": {
+   "device_id": "ALM-TC-2",
+   "device_name": "Рельсовая цепь, путь 2",
+   "stale_after_s": 8.0,
+   "observed": "occupied",
+   "age_s": 0.5,
+   "observed_at": "2026-10-07T18:00:44.960468+00:00",
+   "received_at": "2026-10-07T18:00:44.960468+00:00",
+   "latency_ms": 0.0,
+   "state": "actual",
+   "message": "Данные актуальны."
+  },
+  "ALM-T3": {
+   "device_id": "ALM-TC-3",
+   "device_name": "Рельсовая цепь, путь 3",
+   "stale_after_s": 8.0,
+   "observed": "occupied",
+   "age_s": 0.5,
+   "observed_at": "2026-10-07T18:00:44.960468+00:00",
+   "received_at": "2026-10-07T18:00:44.960468+00:00",
+   "latency_ms": 0.0,
+   "state": "actual",
+   "message": "Данные актуальны."
+  },
+  "ALM-T4": {
+   "device_id": "ALM-TC-4",
+   "device_name": "Рельсовая цепь, путь 4",
+   "stale_after_s": 8.0,
+   "observed": "occupied",
+   "age_s": 0.5,
+   "observed_at": "2026-10-07T18:00:44.960468+00:00",
+   "received_at": "2026-10-07T18:00:44.960468+00:00",
+   "latency_ms": 0.0,
+   "state": "actual",
+   "message": "Данные актуальны."
+  },
+  "ALM-T5": {
+   "device_id": "ALM-TC-5",
+   "device_name": "Рельсовая цепь, путь 5",
+   "stale_after_s": 8.0,
+   "observed": "occupied",
+   "age_s": 0.5,
+   "observed_at": "2026-10-07T18:00:44.960468+00:00",
+   "received_at": "2026-10-07T18:00:44.960468+00:00",
+   "latency_ms": 0.0,
+   "state": "actual",
+   "message": "Данные актуальны."
+  },
+  "ALM-T6": {
+   "device_id": "ALM-TC-6",
+   "device_name": "Рельсовая цепь, путь 6",
+   "stale_after_s": 8.0,
+   "observed": "occupied",
+   "age_s": 0.5,
+   "observed_at": "2026-10-07T18:00:44.960468+00:00",
+   "received_at": "2026-10-07T18:00:44.960468+00:00",
+   "latency_ms": 0.0,
+   "state": "actual",
+   "message": "Данные актуальны."
+  },
+  "ALM-T7": {
+   "device_id": "ALM-TC-7",
+   "device_name": "Рельсовая цепь, путь 7",
+   "stale_after_s": 8.0,
+   "observed": "free",
+   "age_s": 0.5,
+   "observed_at": "2026-10-07T18:00:44.960468+00:00",
+   "received_at": "2026-10-07T18:00:44.960468+00:00",
+   "latency_ms": 0.0,
+   "state": "actual",
+   "message": "Данные актуальны."
+  },
+  "ALM-T8": {
+   "device_id": "ALM-TC-8",
+   "device_name": "Рельсовая цепь, путь 8",
+   "stale_after_s": 8.0,
+   "observed": "free",
+   "age_s": 0.5,
+   "observed_at": "2026-10-07T18:00:44.960468+00:00",
+   "received_at": "2026-10-07T18:00:44.960468+00:00",
+   "latency_ms": 0.0,
+   "state": "actual",
+   "message": "Данные актуальны."
+  },
+  "ALM-T9": {
+   "device_id": "ALM-TC-9",
+   "device_name": "Рельсовая цепь, путь 9",
+   "stale_after_s": 8.0,
+   "observed": "free",
+   "age_s": 0.5,
+   "observed_at": "2026-10-07T18:00:44.960468+00:00",
+   "received_at": "2026-10-07T18:00:44.960468+00:00",
+   "latency_ms": 0.0,
+   "state": "actual",
+   "message": "Данные актуальны."
+  },
+  "ALM-T10": {
+   "device_id": "ALM-TC-10",
+   "device_name": "Рельсовая цепь, путь 10",
+   "stale_after_s": 8.0,
+   "observed": "free",
+   "age_s": 0.5,
+   "observed_at": "2026-10-07T18:00:44.960468+00:00",
+   "received_at": "2026-10-07T18:00:44.960468+00:00",
+   "latency_ms": 0.0,
+   "state": "actual",
+   "message": "Данные актуальны."
+  },
+  "ALM-T13": {
+   "device_id": "ALM-TC-13",
+   "device_name": "Рельсовая цепь, путь 13",
+   "stale_after_s": 8.0,
+   "observed": "free",
+   "age_s": 0.5,
+   "observed_at": "2026-10-07T18:00:44.960468+00:00",
+   "received_at": "2026-10-07T18:00:44.960468+00:00",
+   "latency_ms": 0.0,
+   "state": "actual",
+   "message": "Данные актуальны."
+  },
+  "ALM-T14": {
+   "device_id": "ALM-TC-14",
+   "device_name": "Рельсовая цепь, путь 14",
+   "stale_after_s": 8.0,
+   "observed": "free",
+   "age_s": 0.5,
+   "observed_at": "2026-10-07T18:00:44.960468+00:00",
+   "received_at": "2026-10-07T18:00:44.960468+00:00",
+   "latency_ms": 0.0,
+   "state": "actual",
+   "message": "Данные актуальны."
+  },
+  "ALM-T15": {
+   "device_id": "ALM-TC-15",
+   "device_name": "Рельсовая цепь, путь 15",
+   "stale_after_s": 8.0,
+   "observed": "free",
+   "age_s": 0.5,
+   "observed_at": "2026-10-07T18:00:44.960468+00:00",
+   "received_at": "2026-10-07T18:00:44.960468+00:00",
+   "latency_ms": 0.0,
+   "state": "actual",
+   "message": "Данные актуальны."
+  }
+ },
+ "index_config": {
+  "version": 1,
+  "config": {
+   "params": {
+    "idle": {
+     "window_min": 120,
+     "reserve_share": 0.25
+    },
+    "throughput": {
+     "window_min": 240,
+     "target_wagons_per_hour": 90
+    },
+    "route_conflicts": {
+     "max_conflicts": 8
+    },
+    "track_utilization": {
+     "target_low": 0.45,
+     "target_high": 0.8,
+     "zero_at_low": 0.0,
+     "zero_at_high": 1.0
+    },
+    "schedule_deviation": {
+     "window_min": 240,
+     "max_avg_delay_min": 45
+    }
+   },
+   "weights": {
+    "idle": 0.15,
+    "throughput": 0.25,
+    "route_conflicts": 0.15,
+    "track_utilization": 0.2,
+    "schedule_deviation": 0.25
+   },
+   "thresholds": {
+    "normal": 75,
+    "attention": 50
+   },
+   "max_data_age_s": 30
+  }
+ },
+ "requests": [
+  {
+   "id": "RQ-Z-0001",
+   "number": "Z-0001",
+   "from_station_id": "OTR",
+   "wagons_count": 40,
+   "wagon_kind": "gondola",
+   "train_length_m": null,
+   "priority": 2,
+   "split_allowed": true,
+   "desired_departure": "2026-10-01T08:00:00Z",
+   "train_id": null
+  },
+  {
+   "id": "RQ-S1",
+   "number": "S1",
+   "from_station_id": "OTR",
+   "wagons_count": 40,
+   "wagon_kind": "gondola",
+   "train_length_m": null,
+   "priority": 2,
+   "split_allowed": true,
+   "desired_departure": "2026-10-01T07:30:00Z",
+   "train_id": null
+  },
+  {
+   "id": "RQ-S2",
+   "number": "S2",
+   "from_station_id": "OTR",
+   "wagons_count": 57,
+   "wagon_kind": "covered",
+   "train_length_m": null,
+   "priority": 2,
+   "split_allowed": true,
+   "desired_departure": "2026-10-01T09:00:00Z",
+   "train_id": null
+  },
+  {
+   "id": "RQ-S3",
+   "number": "S3",
+   "from_station_id": "ZHT",
+   "wagons_count": 30,
+   "wagon_kind": "tank",
+   "train_length_m": null,
+   "priority": 2,
+   "split_allowed": false,
+   "desired_departure": "2026-10-01T10:20:00Z",
+   "train_id": null
+  },
+  {
+   "id": "RQ-S4",
+   "number": "S4",
+   "from_station_id": "OTR",
+   "wagons_count": 70,
+   "wagon_kind": "gondola",
+   "train_length_m": null,
+   "priority": 2,
+   "split_allowed": true,
+   "desired_departure": "2026-10-01T07:45:00Z",
+   "train_id": null
+  },
+  {
+   "id": "RQ-S5",
+   "number": "S5",
+   "from_station_id": "ZHT",
+   "wagons_count": 20,
+   "wagon_kind": null,
+   "train_length_m": 400.0,
+   "priority": 2,
+   "split_allowed": true,
+   "desired_departure": "2026-10-01T13:00:00Z",
+   "train_id": null
+  },
+  {
+   "id": "RQ-S6",
+   "number": "S6",
+   "from_station_id": "OTR",
+   "wagons_count": 40,
+   "wagon_kind": null,
+   "train_length_m": null,
+   "priority": 2,
+   "split_allowed": true,
+   "desired_departure": "2026-10-01T08:00:00Z",
+   "train_id": null
+  },
+  {
+   "id": "RQ-S7",
+   "number": "S7",
+   "from_station_id": "OTR",
+   "wagons_count": 40,
+   "wagon_kind": "gondola",
+   "train_length_m": null,
+   "priority": 2,
+   "split_allowed": true,
+   "desired_departure": "2026-10-01T06:30:00Z",
+   "train_id": null
+  },
+  {
+   "id": "RQ-S8",
+   "number": "S8",
+   "from_station_id": "ZHT",
+   "wagons_count": 64,
+   "wagon_kind": "hopper",
+   "train_length_m": null,
+   "priority": 2,
+   "split_allowed": true,
+   "desired_departure": "2026-10-01T07:15:00Z",
+   "train_id": null
+  },
+  {
+   "id": "RQ-S9",
+   "number": "S9",
+   "from_station_id": "XXX",
+   "wagons_count": 10,
+   "wagon_kind": "flat",
+   "train_length_m": null,
+   "priority": 2,
+   "split_allowed": false,
+   "desired_departure": "2026-10-01T08:30:00Z",
+   "train_id": null
+  }
+ ],
+ "case": "track_frees"
+}
